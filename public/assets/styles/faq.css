@@ -1,0 +1,22 @@
+@import url(color.css);
+
+
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .faqs{
+        margin-right: -20px;
+        margin-left: -70px;
+    }
+    .faqimg{
+        margin-right: -20px;
+        margin-left: -25px;
+    }
+  }
+
+  .faqs {
+
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    
+}

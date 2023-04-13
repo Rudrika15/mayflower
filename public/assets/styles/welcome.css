@@ -1,0 +1,834 @@
+@import url(color.css);
+
+.navbar1 {
+    background-color: #FFFDF8 !important;
+    box-shadow: var(--gray) 3px 2px 8px !important;
+
+}
+
+.logo {
+    margin-left: 60px !important;
+}
+
+.navbutton1 {
+    background-color: var(--pink);
+    border: var(--white);
+    border: none;
+    color: var(--white);
+}
+
+.navbutton1:hover {
+    border-radius: 50px !important;
+    background-color: var(--white) !important;
+    color: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+.navbutton2 {
+    background-color: var(--black);
+    border: var(--white);
+    border: none;
+    color: var(--white);
+}
+
+.navbutton2:hover {
+    border-radius: 50px !important;
+    background-color: var(--blue) !important;
+    border: 1px solid var(--blue);
+    color: var(--white);
+}
+
+.btun {
+    padding-right: 29px !important;
+}
+
+/* welcome page css */
+
+/* section 1 */
+.section1 {
+    background-color: var(--pink);
+}
+
+.font {
+    font-size: 70px !important;
+}
+
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .section1img{
+     margin-top: 25px;
+    }
+   
+  }
+
+  @media screen and (max-width: 900px) and (min-width: 375px) {
+    .section1{
+     text-align: center;
+    }
+  }
+
+
+.sectionbutton2 {
+    background-color: var(--black);
+    border: var(--white);
+    border: none;
+    color: var(--white);
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.sectionbutton2:hover {
+    color: var(--white);
+}
+
+.sectionbutton1 {
+    background-color: var(--white);
+    border: var(--white);
+    border: none;
+    color: var(--black);
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.sectionbutton1:hover {
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* section 2*/
+.section2 {
+    background-color: var(--white);
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.sectioncard2 {
+    border-radius: 25px;
+    box-shadow: 0px 3px 8px var(--gray);
+}
+
+.otp {
+    color: var(--black);
+}
+
+.gendercard {
+    border-radius: 5px;
+    background-color: var(--pink);
+}
+
+.female {
+    font-size: 2em;
+}
+
+.age {
+    border: 2px solid var(--black);
+    border-radius: 5px;
+   
+}
+
+.familyhistory {
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+
+/* @media only screen and (min-width: 320px) { */
+@media screen and (max-width: 900px) and (min-width: 375px) {
+
+    .familyhistory1 {
+        padding-top: 8px !important;
+    }
+    
+ 
+}
+
+/* .familyhistory1 {
+    margin-top: -90px !important;
+} */
+
+.familyicon1 {
+    text-align: center !important;
+    background-color: darkgrey;
+    font-size: 100%;
+    border-radius: 50% 50%;
+    padding: 10px;
+}
+
+.cancer-clicked {
+    background-color: var(--pink) !important;
+    border-radius: 50% 50%;
+    padding: 8px;
+    color: var(--white);
+}
+
+.diabetes-clicked {
+    background-color: var(--blue) !important;
+    border-radius: 50% 50%;
+    padding: 8px;
+    color: var(--white);
+}
+
+.bloodpressure-clicked {
+    background-color: var(--pink) !important;
+    border-radius: 50% 50%;
+    padding: 8px;
+    color: var(--white);
+}
+
+.obesity-clicked {
+    background-color: var(--yellow) !important;
+    border-radius: 50% 50%;
+    padding: 8px;
+    color: var(--white);
+}
+
+.mentalillness-clicked {
+    background-color: var(--gray) !important;
+    border-radius: 50% 50%;
+    padding: 8px;
+    color: var(--white);
+}
+
+.weight {
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    /* height: 80%; */
+    width: auto;
+}
+
+.height {
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    width: auto;
+}
+
+.sectionbutton3 {
+    background-color: var(--pink);
+    border: var(--white);
+    color: var(--white);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.sectionbutton3:hover {
+    color: var(--white);
+}
+
+.card1img {
+    height: 90%;
+    max-width: 100% !important;
+}
+
+.imgcolor {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.imgcolor:hover {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.sections2 {
+    font-size: 4.5vw !important;
+}
+
+.sectionbutton2 {
+    background-color: var(--black);
+    border: var(--white);
+    border: none;
+    color: var(--white);
+    border-radius: 50px;
+    padding: 13px;
+}
+
+.sectionbutton1 {
+    background-color: var(--white);
+    border: var(--white);
+    border: none;
+    color: var(--black);
+    border-radius: 50px;
+    padding: 13px;
+}
+
+/* .section1image {
+    margin: 100px 5px 100px;
+    height: 50%;
+} */
+
+.section2 {
+    background-color: var(--white);
+}
+
+.sectioncard {
+    border-radius: 18px;
+    box-shadow: 0 1px 5px 0;
+}
+
+.text-center {
+    color: var(--black);
+    /* text-transform: uppercase; */
+    /* margin: -50px 0 80px 0; */
+    display: block;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-container label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 16px;
+    color: var(--black);
+    transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.input-container input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--black);
+}
+
+.input-container input:focus~label,
+.input-container input:valid~label {
+    top: -12px;
+    font-size: 12px;
+}
+
+.sendotp {
+    color: var(--black);
+}
+
+.cardfemale {
+    background-color: var(--pink);
+    color: var(--white);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cardage {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cardweight {
+    text-align: center;
+    border-radius: 10px;
+    height: 100% !important;
+}
+
+.cardfamily {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cadrweight {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.personimage {
+    height: 70%;
+    width: 100%;
+    margin-top: 50%;
+}
+
+.circleicon1 {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 100%;
+    padding: 4px;
+}
+
+.circleicon1:hover {
+    border: 3px solid var(--black);
+    position: relative;
+    color: var(--black);
+}
+
+/* section3 */
+.section3 {
+    background-color: var(--antiquewhite);
+    border-radius: 25px;
+}
+
+.section3 {
+    background-color: var(--antiquewhite);
+    border-radius: 15px;
+    position: relative;
+    height: 350px !important;
+}
+
+.section3card {
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 180px;
+    box-shadow: 0 1px 5px 0;
+}
+
+.section-card {
+    color: var(--pink);
+}
+/* our package img css*/
+
+.images1 {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    /* position: relative; */
+}
+
+.cardimageour {
+    position: absolute;
+    right: 1px;
+    font-size: 25px;
+    color: var(--pink);
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    padding-bottom: -25px !important;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: var(--white);
+    margin-right: 10px;
+   
+}
+
+.cardiconour {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+}
+.feet1.active{
+    background-color: var(--pink) !important;
+    color: var(--white) !important;
+    border-radius: 12px 10px 10px 12px;
+}
+.border1[type=text] {
+    border: 1px solid black !important;
+    outline: none;
+}
+.allinonebtn.active{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.mayflower1 {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 20px;
+    border: 2px solid var(--black);
+}
+
+.mayflower2 {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border: 2px solid var(--black);
+}
+.mayflower2:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+.mayflower2:hover {
+    color: var(--black);
+}
+
+.mayflower3 {
+    background-color: var(--white);
+    color: var(--black) !important;
+    border-radius: 50px;
+    margin-left: -50px;
+    margin-top: 30px;
+    border: 2px solid var(--black);
+}
+.mayflower3:hover{
+    color: var(--black);
+}
+.mayflower3:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+.mayflower4 {
+    margin-top: 15px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 2px solid var(--black);
+}
+.mayflower4:hover{
+    color: var(--black);
+}
+.mayflower4:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+.mayflower5 {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    border: 2px solid var(--black);
+    margin-right: 50px;
+    margin-top: 60px;
+}
+.mayflower5:hover{
+    color: var(--black);
+}
+.mayflower5:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+.mayflower6 {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    margin-top: 60px;
+    margin-right: -50px;
+    border: 2px solid var(--black);
+}
+.mayflower6:hover{
+    color: var(--black);
+}
+.mayflower6:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+
+.mayflower7 {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 50px;
+    border: 2px solid var(--black);
+    margin-right: -1px;
+    margin-top: 30px;
+}
+.mayflower7:hover{
+    color: var(--black);
+}
+.mayflower7:focus{
+    background-color: var(--blue);
+    color: var(--white) !important;
+    border: none;
+}
+
+.sectionstart {
+    background-color: var(--white);
+}
+
+/* section 4*/
+.row1 {
+    background-color: var(--white);
+    padding: 30px;
+    padding-left: 75px;
+}
+
+.row2 {
+    background-color: var(--antiquewhite);
+    padding: 30px;
+    padding-left: 75px;
+}
+
+.row3 {
+    background-color: var(--pink);
+    padding: 30px;
+    padding-left: 75px;
+    /* box-shadow: 2px 2px 8px var(--pink); */
+}
+
+.row4 {
+    background-color: var(--pink);
+    padding: 30px;
+    padding-left: 75px;
+    box-shadow: 12px 2px 5px var(--white);
+}
+
+.section4col {
+    position: absolute;
+    margin-left: -100px;
+}
+
+.sectionimage {
+    display: block;
+}
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .sectionimage{
+    display: none;
+    }
+  }
+  @media screen and (max-width: 900px) and (min-width: 375px) {
+    .aboutmayflower{
+    text-align: center;
+    }
+    
+  }
+
+
+.sectionimage {
+    height: 550px !important;
+    width: 300px;
+    position: relative;
+    margin-top: -100px;
+}
+
+/* Slideshow container */
+.section4 {
+    background-color: var(--antiquewhite);
+}
+
+.slideshow-container {
+    position: relative;
+    background: var(--white);
+    transition-duration: 0.8s;
+}
+
+.slide1 {
+    padding-top: 100px;
+    padding-bottom: 25px;
+}
+
+.slider2:hover {
+    border-radius: 50px !important;
+    background: var(--white);
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 50px;
+}
+
+.reviews {
+    color: var(--black);
+    font: bold;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    color: var(--black);
+}
+
+/* The dot/bullet/indicator container */
+.slides1 {
+    color: var(--pink);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+
+/* Add an italic font style to all quotes */
+q {
+    font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+    color: var(--black);
+}
+
+.section6 {
+    background-color: var(--gray);
+    padding: 40px;
+}
+
+.sectionicon {
+    padding-top: 20px !important;
+    color: var(--white);
+}
+
+.sectionicons {
+    padding: 50px !important;
+    background-color: var(--green);
+    height: 200px;
+    width: 200px;
+    font-size: 35px;
+    border-radius: 20px;
+    transition-duration: 2s;
+}
+
+.sectionicons:hover {
+    padding: 50px !important;
+    background-color: var(--green);
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    font-size: 35px;
+}
+
+.sectiontext {
+    /* padding-top: 60px; */
+    color: var(--white) !important;
+}
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .sectiontext{
+        padding-top: 90px !important;
+   
+    }
+    
+  }
+
+.footerimage {
+    height: 100px !important;
+    width: 200px !important;
+}
+
+.footerimage1 {
+    text-align: center;
+}
+
+.footericon1 {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.footericon1:hover {
+    color: var(--black);
+}
+
+.footer {
+    background-color: var(--green);
+}
+
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .part1{
+        padding-top: 5px !important;
+   
+    }
+    .part2{
+        padding-top: 1px !important;
+   
+    }
+    .part3{
+        padding-top: 0px !important;
+   
+    }
+  }
+  
+
+/* age  */
+.btndecrement {
+    border-radius: 0;
+}
+
+.btn:focus,
+.btn:active,
+input:focus {
+    outline: none;
+}
+
+.btn-decrement {
+    border: none;
+}
+
+.btn-increment {
+    border: none;
+}
+
+.spinner-control {
+    display: flex;
+}
+
+.spinner-control input {
+    border: none;
+    text-align: center;
+    z-index: 100;
+    width: 100%;
+    cursor: default;
+}
+
+.form-spinner label {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* .sections1 {
+    font-size: 60px;
+    margin: 100px;
+}
+
+.sections2 {
+    margin: 100px;
+} */
+
+
+/* faq page degin css */
+.accordion-itemfaq{
+    border: none; 
+    box-shadow: 2px 3px 5px 6px var(--white);
+}
+.accordion-buttonfaq{
+    border-radius: 50px !important;
+    background-color: white !important;
+     border:1px solid black !important;
+}
+

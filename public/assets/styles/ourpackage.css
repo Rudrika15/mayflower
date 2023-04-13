@@ -1,0 +1,170 @@
+@import url(color.css);
+
+.ourpackage {
+    background-color: var(--antiquewhite);
+    height: 100% !important;
+    /* position: absolute; */
+}
+
+.btnourpackage {
+    border: 2px solid var(--green);
+    color: var(--green);
+    border-radius: 10px !important;
+    margin: 5px;
+    background-color: var(--white);
+}
+.btnourpackage:hover {
+    color: var(--green);
+}
+.ourpackage1 {
+    background-color: var(--blue);
+    min-height: auto;
+    min-width: auto;
+}
+.ourpackagecards{
+margin-top: -60px;
+position: relative;
+}
+.ourpackagecard {
+    border-radius: 15px !important;
+    height: 140px !important;
+}
+.ourpackagecard1 {
+    border-radius: 15px !important;
+}
+.ourpackagecardimg {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    position: relative;
+}
+.ourpackagecardimg1 {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 35px;
+}
+.btnourpackagecard {
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btnourpackagecard1 {
+    border-radius: 10px;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--pink);
+    color: var(--white);
+}
+.btnourpackagecard1:hover {
+    color: var(--white);
+}
+.ourpackagecards1{
+    margin-top: -45px !important;
+    height: auto;
+}
+@media screen and (max-width: 900px) and (min-width: 375px) {
+    .ourpackagecards1{
+    margin-top: 1px !important;
+    }
+}
+
+.ourpackagecardscard{
+    border-radius: 15px;   
+}
+.ourpackagecard2 {
+    border-radius: 15px !important;
+}
+.ourpackagecard2btn{
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    background-color: var(--white);
+    font-size: medium;
+    
+}
+.bloodsugar{
+ /* background-color: pink;
+ height: 25px;
+ width: 25px; */
+ font-size:15px
+}
+.ourbtn{
+    border-radius: 50px;
+    width: 150px;
+    height: 45px;
+    padding-left: 25px !important;  
+}
+.ourbtnimg{
+height: 45px;
+width: 45px;
+position: absolute;
+border-radius: 20px;
+text-align: center;
+}
+.ourpackagecard6{
+    border-radius: 15px !important;
+}
+.square .bloodsugar::before {
+    content: "\220E";
+    color: var(--pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em;
+}   
+
+.square li{
+    list-style-type: none;
+    margin-bottom: -.5rem;
+}
+.square2{
+    color: var(--pink);
+}
+.line1{
+    width: 50%; 
+    margin-left:10px;
+     border: 5px solid var(--pink);
+     border-radius: 10px;
+}
+
+.line5{
+    width: 50%; 
+    margin-left:10px;
+     border: 3px solid var(--pink);
+     border-radius: 10px;
+}
+
+.square1 .bloodsugar::before {
+    content: "\220E";
+    color: var(--blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}   
+
+.square1 li{
+    list-style-type: none;
+}
+
+.square3{
+    color: var(--blue);
+}
+.line2{
+    width: 55%; 
+    margin-left:10px;
+     border: 5px solid var(--blue);
+     border-radius: 10px;
+}
+.line3{
+    width: 175px;
+    margin-left:220px;
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.pink-color{
+    color: var(--pink);
+}
