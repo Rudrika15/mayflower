@@ -30,28 +30,30 @@ use App\Http\Controllers\TestdetailController;
 use App\Http\Controllers\TesttypeController;
 use App\Models\Aboutus;
 use App\Models\Usermaster;
+use App\Models\Packge;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     $aboutus = Aboutus::first();
-    return view('welcome',compact('aboutus'));
+    $package = Packge::all();
+    return view('welcome', compact('aboutus', 'package'));
 });
 
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/visitor', [HomeController::class, 'index'])->name('visitor');
-Route::match(['get', 'post'],'/package', [HomeController::class, 'create'])->name('ourpackage');
+Route::match(['get', 'post'], '/package', [HomeController::class, 'create'])->name('ourpackage');
 // Route::post('package',[HomeController::class,'update'])->name('ourpackage.update');
-Route::post('/updateData/{id?}',[HomeController::class,'updateData'])->name('ourpackage.updateData');
+Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('ourpackage.updateData');
 
 // calculator
-route::post('welcome',[HomeController::class,'calculator'])->name('welcome');
+route::post('welcome', [HomeController::class, 'calculator'])->name('welcome');
 // Route::post('aboutus',[HomeController::class,'aboutus'])->name('aboutus');
 
 // faq home page
-Route::get('faq',[HomeController::class,'faq'])->name('faq.create');
+Route::get('faq', [HomeController::class, 'faq'])->name('faq.create');
 
 Route::get('/deshboard', [DeshboardController::class, 'create'])->name('deshboard');
 
@@ -59,7 +61,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('permission', PermissionsController::class);
-
 });
 
 // permission table 
@@ -212,13 +213,13 @@ Route::controller(UsermedicinehistoryController::class)->group(function () {
 });
 
 Route::controller(doctormasterController::class)->group(function () {
-    Route::get('doctor/profileedit','profileedit')->name('doctor.doctormaster.profileedit');
-    Route::post('doctor/profileupdate','profileupdate')->name('doctor.doctormaster.profileupdate');
+    Route::get('doctor/profileedit', 'profileedit')->name('doctor.doctormaster.profileedit');
+    Route::post('doctor/profileupdate', 'profileupdate')->name('doctor.doctormaster.profileupdate');
 });
 
 // doctor side appointment
 Route::controller(UserdoctorController::class)->group(function () {
-    Route::get('doctor/appointment','view')->name('doctor.appointment.view');
+    Route::get('doctor/appointment', 'view')->name('doctor.appointment.view');
 });
 
 
@@ -252,11 +253,11 @@ Route::controller(FAQController::class)->group(function () {
     Route::get('admin/faq/delete/{id?}', 'destroy')->name('admin.faq.delete');
 });
 
-Route::controller(GooglereviewController::class)->group(function(){
-    route::get('review','index')->name('review');
+Route::controller(GooglereviewController::class)->group(function () {
+    route::get('review', 'index')->name('review');
 });
 
-Route::controller(TestController::class)->group(function(){
+Route::controller(TestController::class)->group(function () {
     Route::get('admin/test/index', 'index')->name('admin.test.index');
     Route::get('admin/test/create', 'create')->name('admin.test.create');
     Route::post('admin/test/store', 'store')->name('admin.test.store');
@@ -265,7 +266,7 @@ Route::controller(TestController::class)->group(function(){
     Route::get('admin/test/delete/{id?}', 'destroy')->name('admin.test.delete');
 });
 
-Route::controller(TestdetailController::class)->group(function(){
+Route::controller(TestdetailController::class)->group(function () {
     Route::get('admin/testdetail/index', 'index')->name('admin.testdetail.index');
     Route::get('admin/testdetail/create', 'create')->name('admin.testdetail.create');
     Route::post('admin/testdetail/store', 'store')->name('admin.testdetail.store');

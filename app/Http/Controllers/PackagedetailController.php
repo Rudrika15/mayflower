@@ -31,10 +31,18 @@ class PackagedetailController extends Controller
     {
 
         $packagedetail = Packagedetail::join('packges', 'packges.id', '=', 'packagedetails.packageId')
-            ->paginate(5, ['packagedetails.*', 'packges.packageName']);
+            // ->join('sampletypes', 'sampletypes.id', '=', 'packagedetails.sampleType')
+            ->paginate(5, [
+                'packagedetails.*',
+                'packges.packageName',
+                // 'sampletypes.sampleType as sampleName'
+            ]);
+
 
         $sampleType = Packagedetail::join('sampletypes', 'sampletypes.id', '=', 'packagedetails.sampleType')
+            // ->where('packagedetails.sampleType', '=', 1)
             ->get(['packagedetails.*', 'sampletypes.sampleType as sampleName']);
+
 
         return view('admin.packagedetail.index', compact('packagedetail', 'sampleType',));
     }
@@ -82,11 +90,11 @@ class PackagedetailController extends Controller
 
         foreach ($request->testName as $testNames) {
             $testpackage = new Testpackage();
-        $testpackage->packageId = $request->packageName;
-        $testpackage->testId = $testNames;
-        $testpackage->save();
+            $testpackage->packageId = $request->packageName;
+            $testpackage->testId = $testNames;
+            $testpackage->save();
         }
-       
+
 
         // return $testpackage;
 
