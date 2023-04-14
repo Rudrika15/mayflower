@@ -107,8 +107,8 @@ class HomeController extends Controller
     public function create(Request $request)
     {
 
-
         $package = Packge::all();
+
         $packageDetail = Packagedetail::all();
         $aboutus = Aboutus::first();
         $test = Test::all();
@@ -139,7 +139,7 @@ class HomeController extends Controller
         $Overweight = "Overweight";
         $Obese = "Obese";
         $youare = '';
-        
+
         echo $request->isMethod('post');
         echo $request->fname;
 
@@ -216,20 +216,19 @@ class HomeController extends Controller
         }
         // return "hi";
         // $data = Testhistory::latest()->first();
-         return view('ourpackage', compact('youare', 'package', 'packageDetail', 'test', 'testdetail', 'data'));
+        return view('ourpackage', compact('youare', 'package', 'packageDetail', 'test', 'testdetail', 'data'));
     }
 
-    
+
 
     function updateData(Request $request)
     {
-        
-       return  $data =$request->detail;
-         $id = $request->testId;
+
+        return  $data = $request->detail;
+        $id = $request->testId;
         $test = Testhistory::find($id);
         $test->detail = $data;
         $test->save();
-
     }
 
     /* FAQ  home page*/
@@ -238,5 +237,21 @@ class HomeController extends Controller
         $faq = FAQ::where('status', '!=', 'D')->get();
 
         return view('faq.create', compact('faq'));
+    }
+
+    function getTabData($id)
+    {
+        $counter = Packge::join('testpackages', 'testpackages.packageId', '=', 'packges.id')
+            ->where('packges.id', $id)
+            ->get()->count();
+        $package = Packge::join('packagedetails', 'packagedetails.packageId', '=', 'packges.id')
+            ->where('packges.id', $id)
+            ->get(['packges.packageName', 'packagedetails.*']);
+
+        $data = [];
+        $data['counter'] = $counter;
+        $data['package'] = $package;
+        $allData[] = $data;
+        return  $allData;
     }
 }

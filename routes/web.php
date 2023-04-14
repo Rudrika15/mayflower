@@ -37,7 +37,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     $aboutus = Aboutus::first();
     $package = Packge::all();
-    return view('welcome', compact('aboutus', 'package'));
+    $package2 = Packge::all();
+    return view('welcome', compact('aboutus', 'package', 'package2'));
 });
 
 Auth::routes();
