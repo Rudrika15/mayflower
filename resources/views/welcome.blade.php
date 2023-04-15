@@ -275,11 +275,10 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col">
-                                            <input id="pakageId" type="hidden" name="bookId">
-                                            <a type="submit" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </a>
+                                        <a href="#" id="packageLinkId" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -879,6 +878,7 @@
                     let packageItem = data[0].package[0]
                     $('#packageName').text(packageItem.packageName);
                     $('#description').text(packageItem.description);
+                    $('#packageLinkId').attr('href', '{{route("book")}}/' + id);
                 }
 
             }

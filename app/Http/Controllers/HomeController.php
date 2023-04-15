@@ -282,4 +282,10 @@ class HomeController extends Controller
         $allData[] = $data;
         return  $allData;
     }
+
+    function booknow($id)
+    {
+        return $id;
+        return view('book', \compact('id'));
+    }
 }

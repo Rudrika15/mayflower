@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class DeshboardController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -16,9 +15,7 @@ class DeshboardController extends Controller
 
     public function create()
     {
-        
         $user = Auth::User()->id;
-        return view('deshboard',compact('user'));
-
+        return view('deshboard', compact('user'));
     }
 }
