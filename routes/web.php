@@ -51,6 +51,7 @@ Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('o
 
 // calculator
 route::post('welcome', [HomeController::class, 'calculator'])->name('welcome');
+route::get('book/{id?}', [HomeController::class, 'booknow'])->name('book');
 // Route::post('aboutus',[HomeController::class,'aboutus'])->name('aboutus');
 
 // faq home page

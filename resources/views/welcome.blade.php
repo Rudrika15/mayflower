@@ -275,10 +275,10 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col">
-                                        <button type="button" class="btn sectionbutton3">BOOK
+                                        <a href="#" id="packageLinkId" class="btn sectionbutton3">BOOK
                                             NOW &nbsp;
                                             <i class="bi bi-check2 circleicon1"></i>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -865,15 +865,20 @@
 <script>
     function tabHandler(id) {
         let tabUrl = 'api/getTabData/' + id
+
+        $('#pakageId').val(id);
+
         $.ajax({
             url: tabUrl,
             type: 'GET',
             dataType: 'json',
             success: function(data) {
-                // $('#counter').text(data.counter);
-                if (data.length > 0) {
-                    $('#packageName').text(data[0].packageName);
-                    $('#description').text(data[0].description);
+                if (data.length > 0 && data[0].package.length > 0) {
+                    $('#counter').text(data[0].counter);
+                    let packageItem = data[0].package[0]
+                    $('#packageName').text(packageItem.packageName);
+                    $('#description').text(packageItem.description);
+                    $('#packageLinkId').attr('href', '{{route("book")}}/' + id);
                 }
 
             }
