@@ -29,22 +29,29 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\TestdetailController;
 use App\Http\Controllers\TesttypeController;
 use App\Models\Aboutus;
+use App\Models\packge;
+use App\Models\Packagedetail;
+
 use App\Models\Usermaster;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     $aboutus = Aboutus::first();
-    return view('welcome',compact('aboutus'));
+    $package = Packge::all();
+    $packagedetail = Packagedetail::join('packges','packges.id','=','packagedetails.packageId')->get(['packagedetails.description']);
+    return view('welcome',compact('aboutus','package','packagedetail'));
 });
 
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/visitor', [HomeController::class, 'index'])->name('visitor');
+Route::get('/logins', [HomeController::class, 'index'])->name('visitor');
 Route::match(['get', 'post'],'/package', [HomeController::class, 'create'])->name('ourpackage');
 // Route::post('package',[HomeController::class,'update'])->name('ourpackage.update');
 Route::post('/updateData/{id?}',[HomeController::class,'updateData'])->name('ourpackage.updateData');
+Route::get('/book',[HomeController::class,'book'])->name('ourpackage.book');  
+
 
 // calculator
 route::post('welcome',[HomeController::class,'calculator'])->name('welcome');

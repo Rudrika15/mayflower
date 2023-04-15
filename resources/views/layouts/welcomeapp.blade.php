@@ -78,7 +78,6 @@
 
                     <li class="nav-item">
                         <button type="button" class="btn navbutton1">Book on call</button>
-
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('visitor') }}"> <button type="button" class="btn navbutton2"><i

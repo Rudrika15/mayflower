@@ -71,7 +71,8 @@ class PackagedetailController extends Controller
         $packagedetail->location = $request->location;
         // $packagedetail->sampleType = $request->sampleType;
         $packagedetail['sampleType'] = json_encode($request->sampleType);
-        $packagedetail->testType = $request->testType;
+        // $packagedetail->testType = $request->testType;
+        $packagedetail['testType'] = json_encode($request->sampleType);
         $packagedetail->instructionS = $request->instructionS;
         $packagedetail->consultation = $request->consultation;
         $packagedetail->awareness = $request->awareness;
@@ -111,8 +112,11 @@ class PackagedetailController extends Controller
         $data = Packagedetail::all();
         $sampleType = Sampletype::where('status', '!=', 'D')->get();
         $testType = Testtype::where('status', '!=', 'D')->get();
+        $test = Test::all();
+        $testpackage = Testpackage::all();
 
-        return view('admin.packagedetail.edit', compact('packagedetail', 'user', 'package', 'packagedetailData', 'data', 'sampleType', 'testType'));
+
+        return view('admin.packagedetail.edit', compact('packagedetail', 'user', 'package', 'packagedetailData', 'data', 'sampleType', 'testType','test'));
     }
 
 
@@ -141,8 +145,12 @@ class PackagedetailController extends Controller
         $packagedetail->forPackageNames = $request->forPackageNames;
         $packagedetail->description = $request->description;
         $packagedetail->location = $request->location;
-        $packagedetail->sampleType = $request->sampleType;
-        $packagedetail->testType = $request->testType;
+        // $packagedetail->sampleType = $request->sampleType;
+        $packagedetail['sampleType'] = json_encode($request->sampleType);
+
+        // $packagedetail->testType = $request->testType;
+        $packagedetail['testType'] = json_encode($request->sampleType);
+
         $packagedetail->instructionS = $request->instructionS;
         $packagedetail->consultation = $request->consultation;
         $packagedetail->awareness = $request->awareness;

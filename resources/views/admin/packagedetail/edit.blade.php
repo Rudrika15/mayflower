@@ -42,7 +42,7 @@
         <!-- end header  -->
         <!-- card -->
         <div class="card-content">
-            <form action="{{ route('admin.packagedetail.update') }}" method="POST" data-toggle="validator">
+            <form action="{{ route('admin.packagedetail.update') }}" method="POST" data-toggle="validator" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ $packagedetail->id }}">
 
@@ -122,7 +122,7 @@
                         <div class="form-group">
                             <strong>Sample Type:</strong>
                             <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example"
-                                name="sampleType" id="sampleType" data-error='Select Sample Type Field is required'
+                                name="sampleType[]" id="sampleType" data-error='Select Sample Type Field is required'
                                 required multiple>
                                 <option selected disabled>Select Sample Type</option>
                                 @foreach ($sampleType as $sampleType)
@@ -143,7 +143,7 @@
                         <div class="form-group">
                             <strong>Test Type:</strong>
                             <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example"
-                                name="testType" id="testType" data-error='Select Test Type Field is required'
+                                name="testType[]" id="testType" data-error='Select Test Type Field is required'
                                 multiple>
                                 <option selected disabled>Select Test Type</option>
                                 @foreach ($testType as $testType)
@@ -212,224 +212,23 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Tests:</strong>
-                            <input type="text" class="form-control" data-error='Tests Field is required' 
-                                placeholder="Tests" name="tests" id="tests" value="{{ $packagedetail->tests }}">
-                            <div class="help-block with-errors"></div>
-                            @error('tests')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
+                    <div class="form-group">
+                        <strong class="d-flex justify-content-start" style="padding-left: 18px;">Test :</strong>
+                        <br><br>
+                        @foreach ($test as $testData)
+                            <div class="col-md-4 col-sm-4 col-lg-4">
+                                <input type='checkbox' name="testName[]" id="testName" class="" value="{{ $testData->id }}">{{ $testData->testName }} <br>
+                                <label>{{ Form::checkbox('testName[]', $testData->id, in_array($testData->id, $testpackages) ? true : false, array('class' => 'name')) }}
+                                {{ $testData->testName }}</label>
+                            </div>
+                        @endforeach
+                        <!-- @foreach($permission as $value)
+                        <div class="col-md-3">
+                            <label>{{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions) ? true : false, array('class' => 'name')) }}
+                                {{ $value->name }}</label>
                         </div>
+                        @endforeach -->
                     </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Prelimenary Test:</strong>
-                            <input type="text" class="form-control" data-error='Prelimenary Test Field is required'
-                                required placeholder="Prelimenary Test" name="prelimenaryTest" id="prelimenaryTest"
-                                value="{{ $packagedetail->prelimenaryTest }}">
-                            <div class="help-block with-errors"></div>
-                            @error('prelimenaryTest')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>BMI:</strong>
-                            <input type="text" class="form-control" data-error='BMI Rate Field is required' required
-                                placeholder="BMI" name="bmi" id="bmi" value="{{ $packagedetail->bmi }}">
-                            <div class="help-block with-errors"></div>
-                            @error('bmi')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Radiology Imaging:</strong>
-                            <input type="text" class="form-control" data-error='Radiology Imaging Field is required'
-                                required placeholder="Radiology Imaging" name="radiologyImaging" id="radiologyImaging"
-                                value="{{ $packagedetail->radiologyImaging }}">
-                            <div class="help-block with-errors"></div>
-                            @error('radiologyImaging')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>MRI:</strong>
-                            <input type="text" class="form-control" data-error='MRI Field is required' 
-                                placeholder="MRI" name="mri" id="mri" value="{{ $packagedetail->mri }}">
-                            <div class="help-block with-errors"></div>
-                            @error('mri')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Mammography:</strong>
-                            <input type="text" class="form-control" data-error='Mammography Field is required'
-                                required placeholder="Mammography" name="mammography" id="mammography"
-                                value="{{ $packagedetail->mammography }}">
-                            <div class="help-block with-errors"></div>
-                            @error('mammography')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Cancer Detection:</strong>
-                            <input type="text" class="form-control" data-error='Cancer Detection Field is required'
-                                required placeholder="Cancer Detection" name="cancerDetection" id="cancerDetection"
-                                value="{{ $packagedetail->cancerDetection }}">
-                            <div class="help-block with-errors"></div>
-                            @error('cancerDetection')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Diabetes Screening:</strong>
-                            <input type="text" class="form-control" data-error='Diabetes Screening Field is required'
-                                required placeholder="Diabetes Screening" name="diabetesScreening" id="diabetesScreening"
-                                value="{{ $packagedetail->diabetesScreening }}">
-                            <div class="help-block with-errors"></div>
-                            @error('diabetesScreening')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Thyroid Profile:</strong>
-                            <input type="text" class="form-control" data-error='Thyroid Profile Field is required'
-                                required placeholder="Thyroid Profile" name="thyroidProfile" id="thyroidProfile"
-                                value="{{ $packagedetail->thyroidProfile }}">
-                            <div class="help-block with-errors"></div>
-                            @error('thyroidProfile')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Sexual Fertility Hormones:</strong>
-                            <input type="text" class="form-control"
-                                data-error='Sexual Fertility Hormones Field is required' required
-                                placeholder="Sexual Fertility Hormones" name="sexualFertilityHormones"
-                                id="sexualFertilityHormones" value="{{ $packagedetail->sexualFertilityHormones }}">
-                            <div class="help-block with-errors"></div>
-                            @error('sexualFertilityHormones')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Kidney:</strong>
-                            <input type="text" class="form-control" data-error='Kidney Field is required' required
-                                placeholder="Kidney" name="kidney" id="kidney"
-                                value="{{ $packagedetail->kidney }}">
-                            <div class="help-block with-errors"></div>
-                            @error('kidney')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>ECG:</strong>
-                            <input type="text" class="form-control" data-error='ECG Field is required' 
-                                placeholder="ECG" name="ecg" id="ecg" value="{{ $packagedetail->ecg }}">
-                            <div class="help-block with-errors"></div>
-                            @error('ecg')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Lipid Profile:</strong>
-                            <input type="text" class="form-control" data-error='Lipid Profile Field is required'
-                                required placeholder="Lipid Profile" name="lipidProfile" id="lipidProfile"
-                                value="{{ $packagedetail->lipidProfile }}">
-                            <div class="help-block with-errors"></div>
-                            @error('lipidProfile')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Liver Function:</strong>
-                            <input type="text" class="form-control" data-error='Liver Function Field is required'
-                                required placeholder="Liver Function" name="liverFunction" id="liverFunction"
-                                value="{{ $packagedetail->liverFunction }}">
-                            <div class="help-block with-errors"></div>
-                            @error('liverFunction')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Pregnancy Test:</strong>
-                            <input type="text" class="form-control" data-error='Pregnancy Test Field is required'
-                                required placeholder="Pregnancy Test" name="pregnancyTest" id="pregnancyTest"
-                                value="{{ $packagedetail->pregnancyTest }}">
-                            <div class="help-block with-errors"></div>
-                            @error('pregnancyTest')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Infection Recording:</strong>
-                            <input type="text" class="form-control" data-error='Infection Recording Field is required'
-                                required placeholder="Infection Recording" name="infectionRecording"
-                                id="infectionRecording" value="{{ $packagedetail->infectionRecording }}">
-                            <div class="help-block with-errors"></div>
-                            @error('infectionRecording')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Electrolytes:</strong>
-                            <input type="text" class="form-control" data-error='Electrolytes Field is required'
-                                required placeholder="Electrolytes" name="electrolytes" id="electrolytes"
-                                value="{{ $packagedetail->electrolytes }}">
-                            <div class="help-block with-errors"></div>
-                            @error('electrolytes')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-
 
                     <div class="col-xs-12 col-sm-12 col-md-12 form-group text-center">
                         <button type="submit" class="btn addbtn waves-effect waves-light">Submit</button>

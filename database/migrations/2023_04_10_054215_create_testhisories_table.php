@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('fname');
             $table->string('lname');
-            $table->integer('contact');
+            $table->string('contact');
             $table->string('email');
             $table->integer('Height');
             $table->integer('age');

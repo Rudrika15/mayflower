@@ -134,7 +134,7 @@
                         <div class="form-group">
                             <strong>Test Type:</strong>
                             <select class="form-select form-select-sm form-control select"
-                                aria-label=".form-select-sm example" name="testType" id="testType"
+                                aria-label=".form-select-sm example" name="testType[]" id="testType"
                                 data-error='Test Type Field is required' multiple>
                                 <option selected disabled>Select Test Type</option>
                                 @foreach ($testType as $testTypeData)
@@ -205,7 +205,7 @@
                         <br><br>
                         @foreach ($test as $testData)
                             <div class="col-md-4 col-sm-4 col-lg-4">
-                                <input type='checkbox' name="testName[]" id="testName" class="" value="{{ $testData->id }}">{{ $testData->id }} {{ $testData->testName }} <br>
+                                <input type='checkbox' name="testName[]" id="testName" class="" value="{{ $testData->id }}">{{ $testData->testName }} <br>
                             </div>
                         @endforeach
                     </div>

@@ -25,7 +25,14 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
-
+  public function packageprice($id)
+ {
+    
+    $Packge = Packge::join('packagedetails','packagedetails.packageId','=','packges.id')
+    ->where('packagedetails.packageId','=',$id)
+    ->get('packges.price','packagedetails.*');
+    return $Packge;
+ }
 
     public function calculator(Request $request)
     {
@@ -102,6 +109,11 @@ class HomeController extends Controller
         return view('layouts.visitor');
     }
 
+    public function packageData(Request $request)
+    {
+        return 'hii';
+        // return view('ourpackage.packageData');
+    }
 
 
     public function create(Request $request)
@@ -139,9 +151,9 @@ class HomeController extends Controller
         $Overweight = "Overweight";
         $Obese = "Obese";
         $youare = '';
-        
-        echo $request->isMethod('post');
-        echo $request->fname;
+
+        // echo $request->isMethod('post');
+        // echo $request->fname;
 
         if ($request->isMethod('post')) {
             if ($request->fname) {
@@ -163,7 +175,6 @@ class HomeController extends Controller
                 $data->weight = $request->weight;
                 $data->status = 'N';
                 $data->save();
-
                 //    return $request->id;
                 //   return  $dataupdate = Testhistory::where('id','=',$id);
 
@@ -214,22 +225,22 @@ class HomeController extends Controller
         } else {
             $data = Testhistory::latest()->first();
         }
-        // return "hi";
         // $data = Testhistory::latest()->first();
-         return view('ourpackage', compact('youare', 'package', 'packageDetail', 'test', 'testdetail', 'data'));
+        return view('ourpackage', compact('youare', 'package', 'packageDetail', 'test', 'testdetail', 'data'));
     }
 
-    
+
 
     function updateData(Request $request)
     {
-        
-       return  $data =$request->detail;
-         $id = $request->testId;
+return $id = $request->id;
+
+          $data = $request->detail;
+        $id = $request->testId;
         $test = Testhistory::find($id);
         $test->detail = $data;
         $test->save();
-
+        return view('ourpackage.updateData',compact('test'));
     }
 
     /* FAQ  home page*/

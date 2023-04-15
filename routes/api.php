@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GooglereviewController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('review/index', [GooglereviewController::class, 'index']);
+
+Route::get('packageprice/{id?}', [HomeController::class, 'packageprice']);
+

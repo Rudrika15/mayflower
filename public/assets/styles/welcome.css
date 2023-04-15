@@ -499,7 +499,7 @@
     border-radius: 50px;
     border: 2px solid var(--black);
     margin-right: 50px;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 .mayflower5:hover{
     color: var(--black);
@@ -514,7 +514,7 @@
     background-color: var(--white);
     color: var(--black);
     border-radius: 50px;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-right: -50px;
     border: 2px solid var(--black);
 }
@@ -534,7 +534,7 @@
     border-radius: 50px;
     border: 2px solid var(--black);
     margin-right: -1px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .mayflower7:hover{
     color: var(--black);
