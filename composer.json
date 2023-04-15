@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.2",
         "laravelcollective/html": "*",
+        "razorpay/razorpay": "^2.8",
         "spatie/laravel-permission": "*"
     },
     "require-dev": {

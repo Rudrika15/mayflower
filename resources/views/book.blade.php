@@ -24,14 +24,17 @@
     </ul>
 </div>
 @endif
-    <!-- Header -->
-    
-    <!-- end header  -->
-    <!-- card -->
-    <div class="container">
+<!-- Header -->
+
+<!-- end header  -->
+<!-- card -->
+<div class="container">
     <div class="card mt-5" style="max-width: 80rem;">
-        <form action="" enctype="multipart/form-data" method="" data-toggle="validator">
+        <form action="{{route('bookstore')}}" enctype="multipart/form-data" method="post" data-toggle="validator">
             @csrf
+
+            <input type="hidden" name="packageId" value="{{$packageId}}">
+
             <div class="row p-3">
 
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -41,7 +44,7 @@
                         <div class="help-block with-errors"></div>
                         @error('name')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -51,7 +54,7 @@
                         <div class="help-block with-errors"></div>
                         @error('age')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -61,7 +64,7 @@
                         <div class="help-block with-errors"></div>
                         @error('contact')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -71,7 +74,7 @@
                         <div class="help-block with-errors"></div>
                         @error('height')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -81,7 +84,7 @@
                         <div class="help-block with-errors"></div>
                         @error('weight')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -91,7 +94,7 @@
                         <div class="help-block with-errors"></div>
                         @error('bmi')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -101,22 +104,10 @@
                         <div class="help-block with-errors"></div>
                         @error('email')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6">
-                    <div class="form-group">
-                        <strong>Package Name:</strong>
-                        <select class="form-control" data-error='User Name Field is required' required name="userId" id="userId">
-                            <option value="" selected disabled> Select Package Name </option>
-                            <option value=""></option>
-                        </select>
-                        <div class="help-block with-errors"></div>
-                        @error('userId')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                    </div>
-                </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-3 mb-3 form-group text-center">
                     <button type="submit" class="btn addbtn waves-effect waves-light">Submit</button>
                 </div>
@@ -125,4 +116,4 @@
     </div>
 
 
-@endsection
+    @endsection

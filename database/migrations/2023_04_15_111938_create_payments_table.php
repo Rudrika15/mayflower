@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('userId');
-            $table->string('name'); 
-            $table->string('email');
-            $table->string('contact');
-            $table->string('age');
-            $table->string('height');
-            $table->string('weight');
-            $table->string('bmi');
+            $table->string('payment_id'); // razorpay payment id
+            $table->integer('user_id');
+            $table->string('amount');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('payments');
     }
 };

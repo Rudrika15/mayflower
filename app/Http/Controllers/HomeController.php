@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aboutus;
+use App\Models\Book;
 use App\Models\FAQ;
 use App\Models\Home;
 use App\Models\Packge;
@@ -12,6 +13,7 @@ use App\Models\Packagedetail;
 use App\Models\Test;
 use App\Models\Testdetail;
 use App\Models\Testhistory;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Expr\PostDec;
@@ -25,14 +27,14 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
-  public function packageprice($id)
- {
-    
-    $Packge = Packge::join('packagedetails','packagedetails.packageId','=','packges.id')
-    ->where('packagedetails.packageId','=',$id)
-    ->get('packges.price','packagedetails.*');
-    return $Packge;
- }
+    public function packageprice($id)
+    {
+
+        $Packge = Packge::join('packagedetails', 'packagedetails.packageId', '=', 'packges.id')
+            ->where('packagedetails.packageId', '=', $id)
+            ->get('packges.price', 'packagedetails.*');
+        return $Packge;
+    }
 
     public function calculator(Request $request)
     {
@@ -104,33 +106,32 @@ class HomeController extends Controller
 
 
     /* visitor side page */
-    public function index()
+    public function visitorLogin()
     {
         return view('layouts.visitor');
     }
 
-    public function book(Request $request)
+    public function visitorLoginStore(Request $request)
     {
-        // $book = new Testhistory();
-        // $book->fname = $request->fname;
-        // $book->lname = $request->lname;
-        // $book->contact = $request->contact;
-        // $book->email = $request->email;
-        // if ($request->ftHeight) {
-        //     $book->height = $request->ftHeight;
-        // } else if ($request->inHeight) {
-        //     $book->height = $request->inHeight;
-        // } else if ($request->inches) {
-        //     $book->height = $request->inches;
-        // } else {
-        //     $book->height = $request->height;
-        // }
-        // $book->age = $request->age;
-        // $book->weight = $request->weight;
-        // $book->status = 'N';
-        // $book->save();
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'contactNumber' => 'required',
+            'age' => 'required',
+        ]);
 
-        return view('book');
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->contactNumber = $request->contactNumber;
+        $user->age = $request->age;
+        $user->gender = 'Female';
+        $user->assignRole('Patients');
+        $user->status = "Active";
+        $user->save();
+
+        Auth::login($user);
+        return redirect('/');
     }
 
 
@@ -283,9 +284,42 @@ class HomeController extends Controller
         return  $allData;
     }
 
-    function booknow($id)
+    function booknow($packageId)
     {
-        return $id;
-        return view('book', \compact('id'));
+        return view('book', \compact('packageId'));
+    }
+
+    function booknowstore(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'contact' => 'required',
+            'age' => 'required',
+            'height' => 'required',
+            'weight' => 'required',
+            'bmi' => 'required',
+        ]);
+
+        $check = Auth::check();
+        if ($check) {
+            $userId = Auth::user()->id;
+            $book = new Book();
+            $book->userId  = $userId;
+            $book->packageId  = $request->packageId;
+            $book->name = $request->name;
+            $book->email = $request->email;
+            $book->contact = $request->contact;
+            $book->age = $request->age;
+            $book->height = $request->height;
+            $book->weight = $request->weight;
+            $book->bmi = $request->bmi;
+            $book->save();
+
+            return redirect("payment")->with('success', 'booking Success');
+        } else {
+
+            return redirect('/logins');
+        }
     }
 }

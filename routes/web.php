@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CommonfieldsController;
 use App\Http\Controllers\DoctormasterController;
 use App\Http\Controllers\MasterController;
@@ -22,6 +23,7 @@ use App\Http\Controllers\DeshboardController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\GooglereviewController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SampletypeController;
@@ -39,28 +41,25 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     $aboutus = Aboutus::first();
     $package = Packge::all();
-    $packagedetail = Packagedetail::join('packges','packges.id','=','packagedetails.packageId')->get(['packagedetails.description']);
+    $packagedetail = Packagedetail::join('packges', 'packges.id', '=', 'packagedetails.packageId')->get(['packagedetails.description']);
     $package2 = Packge::all();
-    return view('welcome', compact('aboutus', 'package', 'package2','packagedetail'));
+    return view('welcome', compact('aboutus', 'package', 'package2', 'packagedetail'));
 });
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/logins', [HomeController::class, 'index'])->name('visitor');
-Route::match(['get', 'post'],'/package', [HomeController::class, 'create'])->name('ourpackage');
-// Route::post('package',[HomeController::class,'update'])->name('ourpackage.update');
-Route::post('/updateData/{id?}',[HomeController::class,'updateData'])->name('ourpackage.updateData');
-Route::get('/book',[HomeController::class,'book'])->name('ourpackage.book');  
-
-Route::get('/visitor', [HomeController::class, 'index'])->name('visitor');
+Route::get('/logins', [HomeController::class, 'visitorLogin'])->name('visitor');
+Route::post('/logins', [HomeController::class, 'visitorLoginStore'])->name('visitor.store');
 Route::match(['get', 'post'], '/package', [HomeController::class, 'create'])->name('ourpackage');
-// Route::post('package',[HomeController::class,'update'])->name('ourpackage.update');
+Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('ourpackage.updateData');
+
+
+Route::match(['get', 'post'], '/package', [HomeController::class, 'create'])->name('ourpackage');
 Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('ourpackage.updateData');
 
 // calculator
 route::post('welcome', [HomeController::class, 'calculator'])->name('welcome');
-route::get('book/{id?}', [HomeController::class, 'booknow'])->name('book');
-// Route::post('aboutus',[HomeController::class,'aboutus'])->name('aboutus');
+route::get('book/{packageid?}', [HomeController::class, 'booknow'])->name('book');
+route::post('book', [HomeController::class, 'booknowstore'])->name('bookstore');
 
 // faq home page
 Route::get('faq', [HomeController::class, 'faq'])->name('faq.create');
@@ -72,6 +71,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', UserController::class);
     Route::resource('permission', PermissionsController::class);
 });
+
+// RazorPay 
+
+
+Route::get('payment', [PaymentController::class, 'payWithRazorpay'])->name('paymentview');
+Route::post('paymentstore', [PaymentController::class, 'payment'])->name('payment');
 
 // permission table 
 Route::controller(PermissionsController::class)->group(function () {
@@ -107,6 +112,11 @@ Route::controller(PackgeController::class)->group(function () {
     Route::get('admin/package/edit/{id?}', 'edit')->name('admin.package.edit');
     Route::post('admin/package/update/{id?}', 'update')->name('admin.package.update');
     Route::get('admin/package/delete/{id?}', 'destroy')->name('admin.package.delete');
+});
+
+// admin side Booking View
+Route::controller(BookingController::class)->group(function () {
+    Route::get('booking/index', 'index')->name('booking.index');
 });
 
 // admin side package details

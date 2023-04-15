@@ -866,6 +866,7 @@
     function tabHandler(id) {
         let tabUrl = 'api/getTabData/' + id
 
+        console.log();
         $('#pakageId').val(id);
 
         $.ajax({

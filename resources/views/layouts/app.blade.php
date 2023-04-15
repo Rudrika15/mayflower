@@ -49,8 +49,7 @@
             <a href="#" class="logo">MayFlower <i class="bi bi-flower1 text-warning"></i></a>
             <button type="button" class="button-close fa fa-times js__menu_close"></button>
             <div class="user">
-                <a href="#" class="avatar"><img src="http://placehold.it/80x80" alt=""><span
-                        class="status online"></span></a>
+                <a href="#" class="avatar"><img src="http://placehold.it/80x80" alt=""><span class="status online"></span></a>
                 <h5 class="name"><a href="/deshboard">{{ Auth::user()->name }}</a></h5>
                 <!-- <h5 class="position">{{ Auth::user()->getRoleNames() }}</h5> -->
                 <!-- /.name -->
@@ -76,129 +75,110 @@
 
                 @guest
                 @else
-                    @if (Auth::user()->hasRole('Admin'))
-                        <ul class="menu js__accordion">
-                            <li class="current">
-                                <a class="waves-effect" href="/deshboard"><i
-                                        class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-                                <!-- <a class="waves-effect"  href="{{ route('admin.master.index') }}"><i class="menu-icon fa fa-home"></i><span>Master</span></a> -->
-                                <!-- <a class="waves-effect" href="{{ route('admin.testsuggetion.index') }}"><i class="menu-icon fa fa-home"></i><span>Testsuggetion</span></a> -->
+                @if (Auth::user()->hasRole('Admin'))
+                <ul class="menu js__accordion">
+                    <li class="current">
+                        <a class="waves-effect" href="/deshboard"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <!-- <a class="waves-effect"  href="{{ route('admin.master.index') }}"><i class="menu-icon fa fa-home"></i><span>Master</span></a> -->
+                        <!-- <a class="waves-effect" href="{{ route('admin.testsuggetion.index') }}"><i class="menu-icon fa fa-home"></i><span>Testsuggetion</span></a> -->
 
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.package.index') }}"><i
-                                     class="fa fa-paper-plane-o menu-icon"></i><span>Packge</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.packagedetail.index') }}"><i
-                                        class="menu-icon fa fa-deaf"></i><span>Packge Detail</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.test.index') }}"><i
-                                        class="menu-icon fa fa-deaf"></i><span>Test</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.testdetail.index') }}"><i
-                                        class="menu-icon fa fa-deaf"></i><span>Test Detail</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.testcenter.index') }}"><i
-                                        class="menu-icon fa fa-map-marker"></i><span>Test center</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.doctormaster.index') }}"><i
-                                        class="menu-icon fa fa-glass"></i><span>Doctor master</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.userpackage.index') }}"><i
-                                        class="menu-icon fa fa-user"></i><span>User Package</span></a>
-                            </li>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.package.index') }}"><i class="fa fa-paper-plane-o menu-icon"></i><span>Packge</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.packagedetail.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Packge Detail</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.test.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Test</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.testdetail.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Test Detail</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.testcenter.index') }}"><i class="menu-icon fa fa-map-marker"></i><span>Test center</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.doctormaster.index') }}"><i class="menu-icon fa fa-glass"></i><span>Doctor master</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.userpackage.index') }}"><i class="menu-icon fa fa-user"></i><span>User Package</span></a>
+                    </li>
 
 
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.userlabreport.index') }}"><i
-                                        class="menu-icon fa fa-flask"></i><span>User Lab Reports</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.usertestcenter.index') }}"><i
-                                        class="menu-icon fa fa-map-marker"></i><span>User Test Center</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.sampletype.index') }}"><i
-                                        class="menu-icon fa fa-simplybuilt"></i><span>Sample Type</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.testtype.index') }}"><i
-                                        class="menu-icon fa fa-file-text"></i><span>Test Type</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.aboutus.index') }}"><i
-                                        class="menu-icon fa fa-life-ring"></i><span>About Us</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.blog.index') }}"><i
-                                        class="menu-icon fa fa-rss"></i><span>Blog</span></a>
-                            </li>
-                            <li>
-                                <a class="waves-effect" href="{{ route('admin.faq.index') }}"><i
-                                        class="menu-icon fa fa-star"></i><span>FAQ</span></a>
-                            </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.userlabreport.index') }}"><i class="menu-icon fa fa-flask"></i><span>User Lab Reports</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.usertestcenter.index') }}"><i class="menu-icon fa fa-map-marker"></i><span>User Test Center</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.sampletype.index') }}"><i class="menu-icon fa fa-simplybuilt"></i><span>Sample Type</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.testtype.index') }}"><i class="menu-icon fa fa-file-text"></i><span>Test Type</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.aboutus.index') }}"><i class="menu-icon fa fa-life-ring"></i><span>About Us</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.blog.index') }}"><i class="menu-icon fa fa-rss"></i><span>Blog</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('admin.faq.index') }}"><i class="menu-icon fa fa-star"></i><span>FAQ</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('booking.index') }}"><i class="menu-icon fa fa-book"></i><span>Bookings</span></a>
+                    </li>
+                </ul>
+                <!-- /.menu js__accordion -->
+                <h5 class="title">Other</h5>
+                <!-- /.title -->
+                <ul class="menu js__accordion">
+                    <li class="">
+                        <!-- parent-item -->
+                        <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-cog"></i><span>Settings</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                        <ul class="sub-menu js__content">
+                            <li><a href="{{ route('users.index') }}">User Managment</a></li>
+                            <li><a href="{{ route('roles.index') }}">Role Managment</a></li>
+                            <li><a href="{{ route('permissions.index') }}">Permission Managment</a></li>
+
                         </ul>
-                        <!-- /.menu js__accordion -->
-                        <h5 class="title">Other</h5>
-                        <!-- /.title -->
-                        <ul class="menu js__accordion">
-                            <li class="">
-                                <!-- parent-item -->
-                                <a class="waves-effect parent-item js__control" href="#"><i
-                                        class="menu-icon fa fa-cog"></i><span>Settings</span><span
-                                        class="menu-arrow fa fa-angle-down"></span></a>
-                                <ul class="sub-menu js__content">
-                                    <li><a href="{{ route('users.index') }}">User Managment</a></li>
-                                    <li><a href="{{ route('roles.index') }}">Role Managment</a></li>
-                                    <li><a href="{{ route('permissions.index') }}">Permission Managment</a></li>
-
-                                </ul>
-                                <!-- /.sub-menu js__content -->
-                            </li>
-                        </ul>
-                    @else
-                        @if (Auth::user()->hasRole('Doctor'))
-                            <ul class="menu js__accordion">
-                                <li class="current">
-                                    <a class="waves-effect" href="/deshboard"><i
-                                            class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect" href="{{ route('doctor.userdoctorhistory.index') }}"><i
-                                            class="menu-icon fa fa-history"></i><span>User Doctor History</span></a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect" href="{{ route('doctor.usermedicinehistory.index') }}"><i
-                                            class="menu-icon fa fa-medkit"></i><span>User Medicine History</span></a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect" href="{{ route('doctor.doctormaster.profileedit') }}"><i
-                                            class="menu-icon fa fa-user"></i><span>Doctor Profile</span></a>
-                                </li>
-                                <li>
-                                    <a class="waves-effect" href="{{ route('doctor.appointment.view') }}">
-                                        <i class="menu-icon fa fa-plus"></i><span>Appointment</span></a>
-                                </li>
-                            </ul>
-                        @else
-                            @if (Auth::user()->hasRole('Patients'))
-                                <ul class="menu js__accordion">
-                                    <li class="current">
-                                        <a class="waves-effect" href="/deshboard"><i
-                                                class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
-                                    </li>
-                                </ul>
-                            @endif
-                        @endif
-                    @endif
+                        <!-- /.sub-menu js__content -->
+                    </li>
+                </ul>
+                @else
+                @if (Auth::user()->hasRole('Doctor'))
+                <ul class="menu js__accordion">
+                    <li class="current">
+                        <a class="waves-effect" href="/deshboard"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('doctor.userdoctorhistory.index') }}"><i class="menu-icon fa fa-history"></i><span>User Doctor History</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('doctor.usermedicinehistory.index') }}"><i class="menu-icon fa fa-medkit"></i><span>User Medicine History</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('doctor.doctormaster.profileedit') }}"><i class="menu-icon fa fa-user"></i><span>Doctor Profile</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('doctor.appointment.view') }}">
+                            <i class="menu-icon fa fa-plus"></i><span>Appointment</span></a>
+                    </li>
+                </ul>
+                @else
+                @if (Auth::user()->hasRole('Patients'))
+                <ul class="menu js__accordion">
+                    <li class="current">
+                        <a class="waves-effect" href="/deshboard"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
+                    </li>
+                </ul>
+                @endif
+                @endif
+                @endif
                 @endguest
                 <!-- /.menu js__accordion -->
 
@@ -212,8 +192,7 @@
 
     <div class="fixed-navbar">
         <div class="pull-left">
-            <button type="button"
-                class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+            <button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
             <h1 class="page-title">@yield('nav')</h1>
             <!-- /.page-title -->
         </div>
@@ -221,9 +200,7 @@
         <div class="pull-right">
             <div class="ico-item">
                 <a href="#" class="ico-item fa fa-search js__toggle_open" data-target="#searchform-header"></a>
-                <form action="#" id="searchform-header" class="searchform js__toggle"><input type="search"
-                        placeholder="Search..." class="input-search"><button class="fa fa-search button-search"
-                        type="submit"></button></form>
+                <form action="#" id="searchform-header" class="searchform js__toggle"><input type="search" placeholder="Search..." class="input-search"><button class="fa fa-search button-search" type="submit"></button></form>
                 <!-- /.searchform -->
             </div>
             <!-- /.ico-item -->
@@ -231,12 +208,9 @@
             <!-- /.ico-item fa fa-fa-arrows-alt -->
 
             <!-- /.ico-item -->
-            <a href="#" class="ico-item fa fa-envelope notice-alarm js__toggle_open"
-                data-target="#message-popup"></a>
-            <a href="#" class="ico-item pulse"><span class="ico-item fa fa-bell notice-alarm js__toggle_open"
-                    data-target="#notification-popup"></span></a>
-            <a class="ico-item fa fa-power-off js__logou" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
+            <a href="#" class="ico-item fa fa-envelope notice-alarm js__toggle_open" data-target="#message-popup"></a>
+            <a href="#" class="ico-item pulse"><span class="ico-item fa fa-bell notice-alarm js__toggle_open" data-target="#notification-popup"></span></a>
+            <a class="ico-item fa fa-power-off js__logou" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
             </a>
 
@@ -354,7 +328,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 
 </html>
