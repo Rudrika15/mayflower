@@ -227,366 +227,333 @@
             </p>
         </div>
 
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-md-3 nav" id="nav-tab" role="tablist">
                     <nav>
+                        <?php
+                        $count = 0;
+                        ?>
+                        @if(count($package) != 0)
+                        @foreach($package as $package)
+                        @php
+                        $count++;
+                        @endphp
 
-                        <!-- @foreach ($package as $packageData)
-                        <div class="d-flex justify-content-end mt-2">
-                            <button class="mayflower2 nav-link" id="nav-fertility-tab" data-bs-toggle="tab" data-bs-target="#nav-fertility" type="button" role="tab" aria-controls="nav-fertility" aria-selected="false" data-bs-slide="fertility"> {{ $packageData->packageName }}
-                            </button>
-                        </div>
-                        @endforeach -->
-                        <!-- <div class="d-flex justify-content-end mt-2">
-                            <button class="mayflower2 nav-link" id="nav-fertility-tab" data-bs-toggle="tab" data-bs-target="#nav-fertility" type="button" role="tab" aria-controls="nav-fertility" aria-selected="false" data-bs-slide="fertility"> {{ $packageData->packageName }}
-                            </button>
-                        </div> -->
-
-                        <div class="d-flex justify-content-start">
-                            <button class="mayflower1 nav-link allinonebtn active" id="nav-allinone-tab" data-bs-toggle="tab" data-bs-target="#nav-allinone" type="button" role="tab" aria-controls="nav-allinone" aria-selected="true" data-bs-slide="allinone">Mayflower all in One
-                            </button>
-                        </div>
-                        <div class="d-flex justify-content-end mt-5">
-                            <button class="mayflower2 nav-link allinonebtn" id="nav-fertility-tab" data-bs-toggle="tab" data-bs-target="#nav-fertility" type="button" role="tab" aria-controls="nav-fertility" aria-selected="false" data-bs-slide="fertility">Fertility checkup</button>
-                        </div>
-                        <div class="d-flex justify-content-start">
-                            <button class="mayflower3 nav-link allinonebtn" id="nav-myfirsthealthcheckup-tab" data-bs-toggle="tab" data-bs-target="#nav-myfirsthealthcheckup" type="button" role="tab" aria-controls="nav-myfirsthealthcheckup" aria-selected="false">My
-                                first health chackup</button>
-                        </div>
-                        <div class="d-flex">
-                            <button class="mayflower4 nav-link allinonebtn" id="nav-premaritalcounselling-tab" data-bs-toggle="tab" data-bs-target="#nav-premaritalcounselling" type="button" role="tab" aria-controls="nav-premaritalcounselling" aria-selected="false">Pre-marital counselling</button>
-                        </div>
-
-                    </nav>
+                        @if($count < 5) @if($count%2==0) <div class="d-flex justify-content-start">
+                            <button class="mayflower1 nav-link allinonebtn" id="nav-allinone-tab" data-bs-toggle="tab" data-bs-target="#nav-allinone" type="button" role="tab" aria-controls="nav-allinone" aria-selected="true" data-bs-slide="allinone" onclick="tabHandler('{{$package->id}}');">{{$package->packageName}}</button>
+                </div>
+                @else
+                <div class="d-flex justify-content-end mt-5">
+                    <button class="mayflower2 nav-link allinonebtn" id="nav-fertility-tab" data-bs-toggle="tab" data-bs-target="#nav-fertility" type="button" role="tab" aria-controls="nav-fertility" aria-selected="false" data-bs-slide="fertility" onclick="tabHandler('{{$package->id}}');">{{$package->packageName}}</button>
                 </div>
 
-                <div class="tab-content col-sm-6 col-md-6 mt-2 " id="nav-tabContent">
-                    <div class="tab-pane flade active show ms-4" id="nav-allinone" role="tabpanel" aria-labelledby="nav-allinone-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5 cardall" style="max-width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">Mayflower all in one</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                        <!-- @foreach ($packagedetail as $packagedetail)
-
-
-    {{$packagedetail->description}}
-@endforeach -->
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-fertility" role="tabpanel" aria-labelledby="nav-fertility-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">Fertility checkup</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-myfirsthealthcheckup" role="tabpanel" aria-labelledby="nav-myfirsthealthcheckup-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">My first health checkup</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-premaritalcounselling" role="tabpanel" aria-labelledby="nav-premaritalcounselling-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">Pre-marital counselling</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-pocos" role="tabpanel" aria-labelledby="nav-pocos-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">POCOS Screening</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-menopausal" role="tabpanel" aria-labelledby="nav-menopausal-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">Menopausal</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade ms-4" id="nav-screening" role="tabpanel" aria-labelledby="nav-screening-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">Endometriosis Screening</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade ms-4" id="nav-hi" role="tabpanel" aria-labelledby="nav-hi-tab">
-                        <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
-                            <div class="row">
-                                <div class="col-9">
-                                    <h6 class="section-card">hiii Screening</h6>
-                                    <div>
-                                        <p>Comprehensive women health check-up encompassing all the critical
-                                            aspect of
-                                            women's
-                                            health.</p>
-                                    </div>
-                                    <div class="fw-bold">
-                                        <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
-                                        <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col">
-                                            <button type="button" class="btn sectionbutton3">BOOK
-                                                NOW &nbsp;
-                                                <i class="bi bi-check2 circleicon1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-3 mt-2 cardiconour">
-                                    <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
-                                    <i class="cardimageour">
-                                        <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
-                                    </i>
-                                    <div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- <div class="col-sm-4 col-md-4"> --}}
-                <div class="col-sm-3 col-md-3 nav" id="nav-tab" role="tablist">
-                    <nav>
-                        <div class="d-flex justify-content-end">
-                            <button class="mayflower5 nav-link allinonebtn" id="nav-pocos-tab" data-bs-toggle="tab" data-bs-target="#nav-pocos" type="button" role="tab" aria-controls="nav-pocos" aria-selected="false">POCOS Screening</button>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button class="mayflower6 nav-link allinonebtn" id="nav-menopausal-tab" data-bs-toggle="tab" data-bs-target="#nav-menopausal" type="button" role="tab" aria-controls="nav-menopausal" aria-selected="false">Menopausal</button>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <button class="mayflower7 nav-link allinonebtn" id="nav-screening-tab" data-bs-toggle="tab" data-bs-target="#nav-screening" type="button" role="tab" aria-controls="nav-screening" aria-selected="false">Endometriosis Screening</button>
-                        </div>
-                        <!-- <div class="d-flex justify-content-end">
-                            <button class="mayflower5 nav-link allinonebtn" id="nav-hi-tab" data-bs-toggle="tab" data-bs-target="#nav-hi" type="button" role="tab" aria-controls="nav-hi" aria-selected="false">hii</button>
-                        </div> -->
-                    </nav>
-                </div>
+                @endif
+                @endif
+                @endforeach
+                @endif
+                </nav>
             </div>
+
+            <div class="tab-content col-sm-6 col-md-6 mt-2 " id="nav-tabContent">
+
+                <div class="tab-pane flade active show ms-4" id="nav-allinone" role="tabpanel" aria-labelledby="nav-allinone-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5 cardall" style="max-width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 id="packageName" class="section-card">Mayflower all in one</h6>
+                                <div>
+                                    <p id="description">Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> <span id="counter">23</span> CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                            <input id="pakageId" type="hidden" name="bookId">
+                                            <a type="submit" class="btn sectionbutton3">BOOK
+                                                NOW &nbsp;
+                                                <i class="bi bi-check2 circleicon1"></i>
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="tab-pane fade ms-4" id="nav-fertility" role="tabpanel" aria-labelledby="nav-fertility-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">Fertility checkup</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ms-4" id="nav-myfirsthealthcheckup" role="tabpanel" aria-labelledby="nav-myfirsthealthcheckup-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">My first health checkup</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ms-4" id="nav-premaritalcounselling" role="tabpanel" aria-labelledby="nav-premaritalcounselling-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">Pre-marital counselling</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ms-4" id="nav-pocos" role="tabpanel" aria-labelledby="nav-pocos-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">POCOS Screening</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ms-4" id="nav-menopausal" role="tabpanel" aria-labelledby="nav-menopausal-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">Menopausal</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade ms-4" id="nav-screening" role="tabpanel" aria-labelledby="nav-screening-tab">
+                    <div class="card d-flex justify-content-center section3card pb-5 mb-5" style="width: 25rem;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 class="section-card">Endometriosis Screening</h6>
+                                <div>
+                                    <p>Comprehensive women health check-up encompassing all the critical
+                                        aspect of
+                                        women's
+                                        health.</p>
+                                </div>
+                                <div class="fw-bold">
+                                    <p><i class="bi bi-chat-left-text"></i> 23 CRITICAL TESTS</p>
+                                    <p><i class="bi bi-eyedropper"></i> BLOOD & URINE SAMPLE</p>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col">
+                                        <button type="button" class="btn sectionbutton3">BOOK
+                                            NOW &nbsp;
+                                            <i class="bi bi-check2 circleicon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mt-2 cardiconour">
+                                <img src="{{ asset('assets/images/image11.png') }}" class="card-img-top images1 img-fluid" alt="...">
+                                <i class="cardimageour">
+                                    <p class="bi bi-check" style="margin-top: -10px; margin-left: -5px;"> </p>
+                                </i>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 -->
+            </div>
+
+            {{-- <div class="col-sm-4 col-md-4"> --}}
+            <div class="col-sm-3 col-md-3 nav" id="nav-tab" role="tablist">
+                <nav>
+                    <?php
+                    $count = 0;
+                    ?>
+                    @if(count($package2) != 0)
+                    @foreach($package2 as $package2)
+                    @php
+                    $count++;
+                    @endphp
+
+                    @if($count > 4) @if($count%2==0) <div class="d-flex justify-content-start">
+                        <button class="mayflower1 nav-link allinonebtn " id="nav-allinone-tab" data-bs-toggle="tab" data-bs-target="#nav-allinone" type="button" role="tab" aria-controls="nav-allinone" aria-selected="true" data-bs-slide="allinone" onclick="tabHandler('{{$package2->id}}');">{{$package2->packageName}}</button>
+                    </div>
+                    @else
+                    <div class="d-flex justify-content-end mt-5">
+                        <button class="mayflower2 nav-link allinonebtn" id="nav-fertility-tab" data-bs-toggle="tab" data-bs-target="#nav-fertility" type="button" role="tab" aria-controls="nav-fertility" aria-selected="false" data-bs-slide="fertility" onclick="tabHandler('{{$package2->id}}');">{{$package2->packageName}}</button>
+                    </div>
+
+                    @endif
+                    @endif
+                    @endforeach
+                    @endif
+
+                </nav>
+            </div>
+
         </div>
     </div>
 </div>
+</div>
 
 {{-- section 4 --}}
-<div class="container-fluid">
-    <div class="row row1" id="row1">
+<div class="container-fluid ">
+    <div class="row row1 pb-5 my-2" id="row1">
         <h3>Schedule your tests easily.</h3>
     </div>
-    <div class="col-md-12 col-sm-12 section4col d-flex justify-content-end" style="z-index: 1; height:100%; width:90%;">
+    <div class="col-md-12 col-sm-12 section4col d-flex justify-content-end mt-5" style="z-index: 1; height:100%; width:90%;">
         <img src="{{ asset('assets/images/mobile.jpg') }}" width="50px" class="sectionimage img-fluid" id="images" alt="Responsive image">
     </div>
     <div class="row">
@@ -652,7 +619,6 @@
                             ut labore et dolore manage aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore nobis perferendis vero numquam quaerat neque quidem adipisci tempore quam fuga odio hic, mollitia explicabo?</p>
                         <p class="author">Mrs. Snjana Shah</p>
                     </div>
-
                     <div class="text-center mb-3">
                         <span class="dot Active" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
@@ -897,4 +863,26 @@
     });
 </script>
 
+<script>
+    function tabHandler(id) {
+        let tabUrl = 'api/getTabData/' + id
+
+        $('#pakageId').val(id);
+
+        $.ajax({
+            url: tabUrl,
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                if (data.length > 0 && data[0].package.length > 0) {
+                    $('#counter').text(data[0].counter);
+                    let packageItem = data[0].package[0]
+                    $('#packageName').text(packageItem.packageName);
+                    $('#description').text(packageItem.description);
+                }
+
+            }
+        });
+    }
+</script>
 @endsection

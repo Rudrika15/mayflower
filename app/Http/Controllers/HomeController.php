@@ -109,18 +109,36 @@ class HomeController extends Controller
         return view('layouts.visitor');
     }
 
-    public function packageData(Request $request)
+    public function book(Request $request)
     {
-        return 'hii';
-        // return view('ourpackage.packageData');
+        // $book = new Testhistory();
+        // $book->fname = $request->fname;
+        // $book->lname = $request->lname;
+        // $book->contact = $request->contact;
+        // $book->email = $request->email;
+        // if ($request->ftHeight) {
+        //     $book->height = $request->ftHeight;
+        // } else if ($request->inHeight) {
+        //     $book->height = $request->inHeight;
+        // } else if ($request->inches) {
+        //     $book->height = $request->inches;
+        // } else {
+        //     $book->height = $request->height;
+        // }
+        // $book->age = $request->age;
+        // $book->weight = $request->weight;
+        // $book->status = 'N';
+        // $book->save();
+
+        return view('book');
     }
 
 
     public function create(Request $request)
     {
 
-
         $package = Packge::all();
+
         $packageDetail = Packagedetail::all();
         $aboutus = Aboutus::first();
         $test = Test::all();
@@ -233,14 +251,12 @@ class HomeController extends Controller
 
     function updateData(Request $request)
     {
-return $id = $request->id;
 
-          $data = $request->detail;
+        return  $data = $request->detail;
         $id = $request->testId;
         $test = Testhistory::find($id);
         $test->detail = $data;
         $test->save();
-        return view('ourpackage.updateData',compact('test'));
     }
 
     /* FAQ  home page*/
@@ -249,5 +265,21 @@ return $id = $request->id;
         $faq = FAQ::where('status', '!=', 'D')->get();
 
         return view('faq.create', compact('faq'));
+    }
+
+    function getTabData($id)
+    {
+        $counter = Packge::join('testpackages', 'testpackages.packageId', '=', 'packges.id')
+            ->where('packges.id', $id)
+            ->get()->count();
+        $package = Packge::join('packagedetails', 'packagedetails.packageId', '=', 'packges.id')
+            ->where('packges.id', $id)
+            ->get(['packges.packageName', 'packagedetails.*']);
+
+        $data = [];
+        $data['counter'] = $counter;
+        $data['package'] = $package;
+        $allData[] = $data;
+        return  $allData;
     }
 }

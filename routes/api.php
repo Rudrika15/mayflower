@@ -25,3 +25,4 @@ Route::get('review/index', [GooglereviewController::class, 'index']);
 
 Route::get('packageprice/{id?}', [HomeController::class, 'packageprice']);
 
+Route::get('getTabData/{id?}', [HomeController::class, 'getTabData']);

@@ -14,10 +14,10 @@
             </div>
             <div class="row d-flex  justify-content-center pb-5">
                 <div class="col text-center">
-                    @foreach ($package as $package)
-                    <input type="hidden" id="packageId" name="packageId" value="{{$package->id}}">
-                    <button type="button" class="btn btnourpackage mayflower2" onclick="packageprice('{{$package->id}}')" value="{{$package->id}}"> {{$package->packageName}} </button>
+                    @foreach($package as $package)
+                    <button type="button" class="btn btnourpackage active fw-bold">{{$package->packageName}}</button>
                     @endforeach
+                    {{-- <hr class="row line3 d-flex justify-content-center"> --}}
 
                     <!-- <a href="#"><button type="button" class="btn btn btnourpackage"> PCOS</button></a>
 
@@ -45,20 +45,22 @@
                         <div class="card-body fw-bold fs-5">
                             Comprehensive women health check-up encompassing all the critical aspect of women's health.
                         </div>
+
                     </div>
                 </div>
                 <div class="col-md-5 d-flex justify-content-start mt-1">
                     <div class="card ourpackagecard1" style="width: 19rem;">
                         <img src="{{ asset('assets/images/image7.jpg') }}" class="card-img-top img-fluid ourpackagecardimg" alt="...">
 
-                        <h4 class="ourpackagecardimg1" id="price">{{$package->price}}</h4>
+                        <!-- <h4 class="ourpackagecardimg1" id="price">{{$package->price}}</h4> -->
+
 
                         <div class="card-body">
                             <div class="col d-flex justify-content-center">
                                 <form action="">
                                     <input type="hidden" name="bmi" id="bmi" value="{{ $data->id }}">
                                     <button type="submit" class="btn btn btnourpackagecard">Add to cart</button>
-                                    <a class="btn btnourpackagecard1" href="{{route('ourpackage.nextpage')}}">Buy now</a>
+                                    <a class="btn btnourpackagecard1" href="{{route('ourpackage.book')}}">Buy now</a>
                                 </form>
                             </div>
                         </div>
@@ -351,6 +353,7 @@
 
 <script>
     function packageprice(id) {
+        console.log('api/packageprice/' + id);
         let pacUrl = 'api/packageprice/' + id
         $.ajax({
             url: pacUrl,
