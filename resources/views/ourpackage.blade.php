@@ -15,7 +15,8 @@
             <div class="row d-flex  justify-content-center pb-5">
                 <div class="col text-center">
                     @foreach($package as $package)
-                    <button type="button" class="btn btnourpackage active fw-bold">{{$package->packageName}}</button>
+                    <!-- <input type="hiddenn" value="{{$package->id}}"> -->
+                    <button type="button" class="btn btnourpackage allinonebtn mayflower2 fw-bold" onclick="packageprice('{{$package->id}}')">{{$package->packageName}}</button>
                     @endforeach
                     {{-- <hr class="row line3 d-flex justify-content-center"> --}}
 
@@ -138,7 +139,7 @@
                                     <button type="button" class="ourpackagecard2btn fw-bold">{{ $test->testName }}</button>
 
                                     @foreach ($testdetail->where('testId', '=', $test->id) as $testdetailData)
-                                    <div class="mt-1 text ">
+                                    <div class="text">
                                         {{-- <input type="checkbox" name="testdetail[]" id="testdetail" value= {{$testdetailData->testDetailName }}> --}}
                                         <label style="font-size: 15px;">
                                             <!-- {{ Form::checkbox('testdetail[]', $testdetailData->id, false, ['class' => 'bloodsugar', 'name' => 'checkbox','value' => '$testdetailData->testDetailName']) }}
@@ -353,7 +354,7 @@
 
 <script>
     function packageprice(id) {
-        console.log('api/packageprice/' + id);
+        // console.log(id);
         let pacUrl = 'api/packageprice/' + id
         $.ajax({
             url: pacUrl,
