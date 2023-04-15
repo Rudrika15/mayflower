@@ -52,7 +52,7 @@
                     <div class="card ourpackagecard1" style="width: 19rem;">
                         <img src="{{ asset('assets/images/image7.jpg') }}" class="card-img-top img-fluid ourpackagecardimg" alt="...">
 
-                        <!-- <h4 class="ourpackagecardimg1" id="price">{{$package->price}}</h4> -->
+                        <h4 class="ourpackagecardimg1" id="price">{{$package->price}}</h4>
 
 
                         <div class="card-body">
