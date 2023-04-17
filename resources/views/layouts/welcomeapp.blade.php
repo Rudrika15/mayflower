@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="<?php echo csrf_token(); ?>">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
 
@@ -38,15 +37,12 @@
 <body>
 
     <!-- header -->
-    <nav
-        class="navbar justify-content-start navbar-expand-lg navbar-light bg-light d-flex shadow-lg p-3 bg-body rounded sticky-top navbar1">
+    <nav class="navbar justify-content-start navbar-expand-lg navbar-light bg-light d-flex shadow-lg p-3 bg-body rounded sticky-top navbar1">
         <a href="http://127.0.0.1:8000/">
             <img class="logo" src="{{ asset('assets/images/site-logo.png') }}" style="max-height: 33px;" />
         </a>
         <div class="container-fluid nav1">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -69,7 +65,7 @@
                         <a class="nav-link active" aria-current="page" href="{{route('faq.create')}}">FAQ's</a>
                     </li>
                     &nbsp;&nbsp;
-                    
+
                 </ul>
             </div>
 
@@ -80,8 +76,7 @@
                         <button type="button" class="btn navbutton1">Book on call</button>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('visitor') }}"> <button type="button" class="btn navbutton2"><i
-                                    class="bi bi-person"></i>&nbsp;Log
+                        <a href="{{ route('visitor') }}"> <button type="button" class="btn navbutton2"><i class="bi bi-person"></i>&nbsp;Log
                                 in</button></a>
                     </li>
                     &nbsp;&nbsp;
@@ -112,8 +107,7 @@
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                         <!-- Content -->
                         <div class="text-center footerimage1">
-                            <img src="{{ asset('assets/images/site-logo.png') }}" alt=""
-                                class="img-fluid footerimage">
+                            <img src="{{ asset('assets/images/site-logo.png') }}" alt="" class="img-fluid footerimage">
                         </div>
                         <div class="mt-5">
                             <p>We are Mayflower Women's Hospital a unit of Mayflower Hospital Pvt.Ltd. and India's one
@@ -241,6 +235,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
-  </script>
+</script>
 
 </html>

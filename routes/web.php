@@ -57,7 +57,7 @@ Route::get('/book', [HomeController::class, 'book'])->name('ourpackage.book');
 // Route::get('/packageprice',[HomeController::class,'packageprice'])->name('ourpackage.packageprice');  
 
 
-Route::get('/logins', [HomeController::class, 'index'])->name('visitor');
+// Route::get('/logins', [HomeController::class, 'index'])->name('visitor');
 Route::match(['get', 'post'], '/package', [HomeController::class, 'create'])->name('ourpackage');
 Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('ourpackage.updateData');
 
@@ -81,7 +81,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('payment', [PaymentController::class, 'payWithRazorpay'])->name('paymentview');
-Route::post('paymentstore', [PaymentController::class, 'payment'])->name('payment');
+Route::any('paymentstore', [PaymentController::class, 'payment'])->name('payment');
 
 // permission table 
 Route::controller(PermissionsController::class)->group(function () {

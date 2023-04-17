@@ -42,12 +42,12 @@ class PaymentController extends Controller
         $payInfo = [
             'payment_id' => $request->razorpay_payment_id,
             'user_id' => $userId,
-            'amount' => $payment['amount'],
+            'amount' => $payment['amount'] / 100,
         ];
 
-        Payment::insertGetId($payInfo);
+        Payment::create($payInfo);
 
-        \Session::put('success', 'Payment successful');
+        Session::put('success', 'Payment successful');
 
         return response()->json(['success' => 'Payment successful']);
     }

@@ -29,7 +29,7 @@
 
                         <div class="card-body text-center">
                             <div class="form-group mt-1 mb-1">
-                                <input type="text" name="amount" id="amountPrice" class="form-control amount" placeholder="Enter Amount">
+                                <input type="text" name="amount" id="amountPrice" readonly class="form-control amount" placeholder="Enter Amount">
                             </div>
                             <button id="rzp-button1" class="btn btn-success btn-lg">Pay</button>
                         </div>
@@ -40,7 +40,10 @@
     </main>
 </div>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script>
+    console.log($('meta[name="csrf-token"]').attr('content'));
     $('#amountPrice').val('{{$book->price}}')
 
     $('body').on('click', '#rzp-button1', function(e) {
@@ -71,7 +74,7 @@
                     success: function(data) {
                         $('.success-message').text(data.success);
                         $('.success-alert').fadeIn('slow', function() {
-                            $('.success-alert').delay(2000).fadeOut();
+                            $('.success-alert').delay(5000).fadeOut();
                         });
                         $('.amount').val('');
                     }
@@ -79,11 +82,11 @@
             },
             "prefill": {
                 "name": "{{$book->name}}",
-                "email": "mehul.bagda@example.com",
-                "contact": "818********6"
+                "email": "{{$book->email}}",
+                "contact": "{{$book->contact}}"
             },
             "notes": {
-                "address": "test test"
+                "address": ""
             },
             "theme": {
                 "color": "#fe9191"
