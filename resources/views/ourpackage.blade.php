@@ -58,12 +58,9 @@
 
                         <div class="card-body">
                             <div class="col d-flex justify-content-center">
-                                <form action="">
-                                    <input type="hidden" name="bmi" id="bmi" value="{{ $data->id }}">
-                                    <button type="submit" class="btn btn btnourpackagecard">Add to cart</button>
-                                    <a class="btn btnourpackagecard1" href="{{route('ourpackage.book')}}">Buy now</a>
-                                </form>
-                            </div>
+                                <button type="submit" class="btn btn btnourpackagecard">Add to cart</button>
+                                <a class="btn btnourpackagecard1" id="packageLinkId" href="#">Buy now</a>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -364,6 +361,7 @@
                 // $('#counter').text(data.counter);
                 if (data.length > 0) {
                     $('#price').text(data[0].price);
+                    $('#packageLinkId').attr('href', '{{route("book")}}/' + id);
                 }
             }
         });
