@@ -319,7 +319,7 @@ class HomeController extends Controller
             return redirect("payment")->with('success', 'booking Success');
         } else {
 
-            return redirect('/logins');
+            return redirect('/visitorLogin');
         }
     }
 }

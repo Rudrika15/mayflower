@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Razorpay\Api\Api;
 use Session;
-use Redirect;
 
 class PaymentController extends Controller
 {
@@ -35,7 +34,7 @@ class PaymentController extends Controller
                 $payment->capture(array('amount' => $payment['amount']));
             } catch (\Exception $e) {
                 return  $e->getMessage();
-                \Session::put('error', $e->getMessage());
+                Session::put('error', $e->getMessage());
                 return redirect()->back();
             }
         }
@@ -45,8 +44,13 @@ class PaymentController extends Controller
             'amount' => $payment['amount'] / 100,
         ];
 
-        Payment::create($payInfo);
+        $payment = Payment::create($payInfo);
 
+        $bookingId = Book::where('userId', '=', $userId)->first();
+
+        $book = Book::find($bookingId->id);
+        $book->payment_id = $payment->id;
+        $book->save();
         Session::put('success', 'Payment successful');
 
         return response()->json(['success' => 'Payment successful']);

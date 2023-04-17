@@ -40,15 +40,15 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     $aboutus = Aboutus::first();
-    $package = Packge::all();
+    $package = Packge::all()->random(8);
     $packagedetail = Packagedetail::join('packges', 'packges.id', '=', 'packagedetails.packageId')->get(['packagedetails.description']);
-    $package2 = Packge::all();
+    $package2 = Packge::all()->random(8);
     return view('welcome', compact('aboutus', 'package', 'package2', 'packagedetail'));
 });
 Auth::routes();
 
-Route::get('/logins', [HomeController::class, 'visitorLogin'])->name('visitor');
-Route::post('/logins', [HomeController::class, 'visitorLoginStore'])->name('visitor.store');
+Route::get('/visitorLogin', [HomeController::class, 'visitorLogin'])->name('visitor');
+Route::post('/visitorLogin', [HomeController::class, 'visitorLoginStore'])->name('visitor.store');
 Route::match(['get', 'post'], '/package', [HomeController::class, 'create'])->name('ourpackage');
 Route::post('/updateData/{id?}', [HomeController::class, 'updateData'])->name('ourpackage.updateData');
 

@@ -46,6 +46,8 @@
                     <th>Contact</th>
                     <th>Age</th>
                     <th>Package</th>
+                    <!-- <th>Payment ID</th>
+                    <th>Amount</th> -->
                     <!-- <th width="280px">Action</th> -->
                 </tr>
                 @foreach ($booking as $bookings)
@@ -55,6 +57,8 @@
                     <td>{{ $bookings->contact }}</td>
                     <td>{{ $bookings->age }}</td>
                     <td>{{ $bookings->packageName }}</td>
+                    <!-- <td>{{ $bookings->payment_id }}</td>
+                    <td>{{ $bookings->amount }}</td> -->
 
                     <!-- <td>
                         <a class="btn btn-success btn-sm" href="{{ route('admin.doctormaster.edit', $bookings->userId) }}">Edit</a>

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('aboutuses', function (Blueprint $table) {
             $table->id();
             $table->longText('text');
+            $table->string('type');
             $table->enum('status', ['Y', 'N', 'D']);
             $table->timestamps();
         });

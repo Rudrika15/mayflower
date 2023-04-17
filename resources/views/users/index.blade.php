@@ -74,13 +74,10 @@
                 </tr>
                 @endforeach
             </table>
+            {!! $data->withQueryString()->links('pagination::bootstrap-5') !!}
             <!-- end table responsive class -->
         </div>
     </div>
-
-    {{-- {!! $data->render() !!} --}}
-    <!-- {!! $data->links() !!} -->
-    <!-- end card -->
 </div>
 
 @endsection

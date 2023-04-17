@@ -15,7 +15,11 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        $data = User::orderBy('id', 'DESC')->paginate(5);
+        $data = User::whereHas('roles', function ($query) {
+            $role = $query->where('name', '=', 'Admin')
+                ->orWhere('name', '=', 'Doctor');
+            return $role;
+        })->orderBy('id', 'DESC')->paginate(5);
         return view('users.index', compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
@@ -33,7 +37,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
             'roles' => 'required',
-           
+
         ]);
 
         $input = $request->all();
@@ -69,8 +73,7 @@ class UserController extends Controller
             'password' => 'same:confirm-password',
             'roles' => 'required'
         ]);
-+
-        $input = $request->all();
+        +$input = $request->all();
         if (!empty($input['password'])) {
             $input['password'] = Hash::make($input['password']);
         } else {

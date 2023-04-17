@@ -49,7 +49,6 @@
             <a href="#" class="logo">MayFlower <i class="bi bi-flower1 text-warning"></i></a>
             <button type="button" class="button-close fa fa-times js__menu_close"></button>
             <div class="user">
-                <a href="#" class="avatar"><img src="http://placehold.it/80x80" alt=""><span class="status online"></span></a>
                 <h5 class="name"><a href="/deshboard">{{ Auth::user()->name }}</a></h5>
                 <!-- <h5 class="position">{{ Auth::user()->getRoleNames() }}</h5> -->
                 <!-- /.name -->
@@ -70,7 +69,6 @@
         <div class="content">
 
             <div class="navigation " style="bottom: 20px;">
-                <h5 class="title">Navigation</h5>
                 <!-- /.title -->
 
                 @guest
@@ -79,6 +77,9 @@
                 <ul class="menu js__accordion">
                     <li class="current">
                         <a class="waves-effect" href="/deshboard"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="{{ route('booking.index') }}"><i class="menu-icon fa fa-book"></i><span>Bookings</span></a>
                     </li>
                     <li>
                         <!-- <a class="waves-effect"  href="{{ route('admin.master.index') }}"><i class="menu-icon fa fa-home"></i><span>Master</span></a> -->
@@ -92,7 +93,7 @@
                         <a class="waves-effect" href="{{ route('admin.packagedetail.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Packge Detail</span></a>
                     </li>
                     <li>
-                        <a class="waves-effect" href="{{ route('admin.test.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Test</span></a>
+                        <a class="waves-effect" href="{{ route('admin.test.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Test Bundle</span></a>
                     </li>
                     <li>
                         <a class="waves-effect" href="{{ route('admin.testdetail.index') }}"><i class="menu-icon fa fa-deaf"></i><span>Test Detail</span></a>
@@ -106,8 +107,6 @@
                     <li>
                         <a class="waves-effect" href="{{ route('admin.userpackage.index') }}"><i class="menu-icon fa fa-user"></i><span>User Package</span></a>
                     </li>
-
-
                     <li>
                         <a class="waves-effect" href="{{ route('admin.userlabreport.index') }}"><i class="menu-icon fa fa-flask"></i><span>User Lab Reports</span></a>
                     </li>
@@ -129,9 +128,7 @@
                     <li>
                         <a class="waves-effect" href="{{ route('admin.faq.index') }}"><i class="menu-icon fa fa-star"></i><span>FAQ</span></a>
                     </li>
-                    <li>
-                        <a class="waves-effect" href="{{ route('booking.index') }}"><i class="menu-icon fa fa-book"></i><span>Bookings</span></a>
-                    </li>
+
                 </ul>
                 <!-- /.menu js__accordion -->
                 <h5 class="title">Other</h5>

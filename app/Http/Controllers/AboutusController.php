@@ -16,14 +16,14 @@ class AboutusController extends Controller
     public function index()
     {
         $aboutus = Aboutus::paginate(5);
-        return view('admin.aboutus.index',compact('aboutus'));
+        return view('admin.aboutus.index', compact('aboutus'));
     }
 
-    
+
     public function create()
     {
         $aboutus =  Aboutus::all();
-        return  view('admin.aboutus.create',compact('aboutus'));
+        return  view('admin.aboutus.create', compact('aboutus'));
     }
 
 
@@ -35,26 +35,26 @@ class AboutusController extends Controller
         ]);
         $aboutus = new Aboutus();
         $aboutus->text = $request->text;
+        $aboutus->type = $request->type;
         $aboutus->status = 'N';
         $aboutus->save();
         return redirect()->route('admin.aboutus.index')->with('success', 'Created Successfully');
-
     }
 
-   
+
     public function show(aboutus $aboutus)
     {
         //
     }
 
-  
+
     public function edit($id)
     {
         $aboutus = Aboutus::find($id);
         return view('admin.aboutus.edit', compact('aboutus'));
     }
 
-   
+
     public function update(Request $request)
     {
         $this->validate($request, [
@@ -64,6 +64,7 @@ class AboutusController extends Controller
         $id = $request->id;
         $aboutus = Aboutus::find($id);
         $aboutus->text = $request->text;
+        $aboutus->type = $request->type;
         $aboutus->status = 'N';
         $aboutus->save();
         return redirect()->route('admin.aboutus.index')->with('success', 'Updated Successfully');
@@ -74,6 +75,6 @@ class AboutusController extends Controller
         $aboutus = Aboutus::find($id);
         $aboutus->status = 'D';
         $aboutus->save();
-        return redirect()->back()->with('success','Deleted Successfully');
+        return redirect()->back()->with('success', 'Deleted Successfully');
     }
 }

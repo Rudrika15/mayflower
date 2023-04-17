@@ -55,29 +55,29 @@
                         <div class="help-block with-errors"></div>
                         @error('testCenterId')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Document:</strong>
-                        <input type="file" class="form-control" data-error='Document Field is required'  required name="document" id="document">
+                        <input type="file" class="form-control" data-error='Document Field is required' required name="document" id="document">
                         <div class="help-block with-errors"></div>
                         @error('document')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Notes:</strong>
-                        <input type="text" class="form-control" placeholder="Add Notes" data-error='Notes Field is required' required name="note" id="note"> 
+                        <input type="text" class="form-control" placeholder="Add Notes" data-error='Notes Field is required' required name="note" id="note">
                         <div class="help-block with-errors"></div>
                         @error('note')
                         <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                        @enderror
                     </div>
                 </div>
 

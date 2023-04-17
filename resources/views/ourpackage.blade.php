@@ -39,7 +39,7 @@
 <div class="container-fluid ourpackage1 pb-5">
     <div class="container">
         <div class="row d-flex justify-content-center">
-
+            {{ Session::forget('success') }}
             <div class="row ourpackagecards">
                 <div class="col-md-7 d-flex justify-content-end">
                     <div class="card ourpackagecard" style="width: 33rem;">
@@ -60,7 +60,7 @@
                             <div class="col d-flex justify-content-center">
                                 <button type="submit" class="btn btn btnourpackagecard">Add to cart</button>
                                 <a class="btn btnourpackagecard1" id="packageLinkId" href="#">Buy now</a>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -53,6 +53,7 @@
                                                 </ul>
                                             </div>
                                             @endif
+                                            {{ Session::forget('success') }}
                                             <div class="card-body text-center mt-2 d-grid gap-3">
                                                 <form action="{{route('visitor.store')}}" method="post" class="fw-bold register-form d-grid gap-3" id="register-form">
                                                     @csrf

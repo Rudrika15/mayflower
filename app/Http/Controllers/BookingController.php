@@ -9,9 +9,13 @@ class BookingController extends Controller
 {
     function index()
     {
-        $booking  = Book::join('packges', 'packges.id', 'books.packageId')
-            ->paginate(5, ['books.*', 'packges.packageName']);
 
+        $booking  = Book::join('packges', 'packges.id', 'books.packageId')
+            // ->join('payments', 'payments.id', '=', 'books.payment_id')
+            ->paginate(10, ['books.*', 'packges.packageName']);
+
+
+        // , 'payments.payment_id', 'payments.amount'
         return view('admin.bookings.index', \compact('booking'));
     }
 }
