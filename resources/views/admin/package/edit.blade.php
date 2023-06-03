@@ -26,57 +26,65 @@
 </div>
 @endif
 <!-- end alerts -->
-    <div class="box-content card danger">
-        <!-- Header -->
-        <div class="card-head">
-            <div>
-                <h4>Package Edit</h4>
-            </div>
-            <div>
-                <a href="{{ route('admin.package.index') }}" class="btn addbtn btn-sm">Back</a>
-            </div>
+<div class="box-content card danger">
+    <!-- Header -->
+    <div class="card-head">
+        <div>
+            <h4>Package Edit</h4>
         </div>
-        <!-- end header  -->
-        <!-- card -->
-        <div class="card-content">
-            <form action="{{ route('admin.package.update') }}" method="POST"  data-toggle="validator">
-                @csrf
-                <input type="hidden" name="id" id="id" value="{{ $package->id }}">
+        <div>
+            <a href="{{ route('admin.package.index') }}" class="btn addbtn btn-sm">Back</a>
+        </div>
+    </div>
+    <!-- end header  -->
+    <!-- card -->
+    <div class="card-content">
+        <form action="{{ route('admin.package.update') }}" method="POST" data-toggle="validator">
+            @csrf
+            <input type="hidden" name="id" id="id" class="packageId" value="{{ $package->id }}">
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Package Name:</strong>
-                            <input type="text" class="form-control" data-error='Package Name Field is required' required
-                                placeholder="Packge Name" name="packageName" id="packageName"
-                                value="{{ $package->packageName }}">
-                            <div class="help-block with-errors"></div>
-                            @error('packageName')
-                            <span class="text-danger">{{ $message }}</span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Package Name:</strong>
+                        <input type="text" class="form-control" data-error='Package Name Field is required' required placeholder="Packge Name" name="packageName" id="packageName" value="{{ $package->packageName }}">
+                        <div class="help-block with-errors"></div>
+                        @error('packageName')
+                        <span class="text-danger">{{ $message }}</span>
                         @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Price:</strong>
-                            <input type="text" class="form-control" data-error='Price Field is required' required
-                                placeholder="Price" name="price" id="price" value="{{$package->price}}">
-                            <div class="help-block with-errors"></div>
-                            @error('price')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-sm-12 col-md-12 form-group text-center">
-                        <button type="submit" class="btn addbtn waves-effect waves-light">Submit</button>
                     </div>
                 </div>
-            </form>
-        </div>
 
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Price:</strong>
+                        <input type="text" class="form-control" data-error='Price Field is required' required placeholder="Price" name="price" id="price" value="{{$package->price}}">
+                        <div class="help-block with-errors"></div>
+                        @error('price')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
 
-        <!-- end card -->
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Sequence:</strong>
+                        <input type="text" class="form-control" data-error='sequence Field is required' value="{{$package->sequence}}" required placeholder="Sequence" name="sequence" id="sequence">
+                        <div class="help-block with-errors"></div>
+                        @error('sequence')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 form-group text-center">
+                    <button type="submit" class="btn addbtn waves-effect waves-light">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
+
+
+    <!-- end card -->
+</div>
+
 @endsection

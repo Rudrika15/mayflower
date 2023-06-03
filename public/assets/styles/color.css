@@ -8,7 +8,8 @@
     --lightgreen: #84bebd;
     --yellow: #f8e55b;
     --pink: #fe9191;
-    --antiquewhite :#FAEBD7;
+    --antiquewhite: #FAEBD7;
+    --purple: #4c528e;
 
 }
 
@@ -243,7 +244,7 @@ a .logo {
     max-width: 160px !important;
 }
 
-.chackall{
+.chackall {
     padding: 12px 10px 12px 10px;
     display: flex;
     justify-content: space-between;

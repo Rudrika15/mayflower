@@ -117,6 +117,8 @@ Route::controller(PackgeController::class)->group(function () {
     Route::get('admin/package/edit/{id?}', 'edit')->name('admin.package.edit');
     Route::post('admin/package/update/{id?}', 'update')->name('admin.package.update');
     Route::get('admin/package/delete/{id?}', 'destroy')->name('admin.package.delete');
+    Route::get('package/getPackage', 'getPackage')->name('package.getPackage');
+    Route::get('package/getPackageEdit/{id?}', 'getPackageEdit')->name('package.getPackageEdit');
 });
 
 // admin side Booking View

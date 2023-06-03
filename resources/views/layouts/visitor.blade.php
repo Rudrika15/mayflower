@@ -5,10 +5,11 @@
 <div class="testimonial-slider pb-3">
     <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
         <div class="container-fluid">
-            <div class="row carousel-dark">
+            <div class="row carousel-dark ">
+
                 <div class="col-md-6 mt-5">
 
-                    <h1 class="fw-bold mt-5 text-white carousel-control">Welcome to Mayflower</h1>
+                    <h1 class="fw-bold mt-5 text-dark carousel-control">Welcome to Mayflower</h1>
 
                     <a class="carousel-control-prev" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="">Create an account</span>

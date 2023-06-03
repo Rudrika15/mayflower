@@ -4,27 +4,32 @@
 .logo {
     margin-left: 60px !important;
 }
+
 .navbutton1 {
     background-color: var(--pink);
     border: var(--white);
     border: none;
 }
+
 .navbutton1:hover {
     border-radius: 50px !important;
     background-color: var(--white) !important;
     color: var(--pink);
     border: 1px solid var(--pink);
 }
+
 .navbutton2 {
     background-color: var(--black);
     border: var(--white);
     border: none;
 }
+
 .navbutton2:hover {
     border-radius: 50px !important;
     background-color: var(--blue) !important;
     border: 1px solid var(--blue);
 }
+
 .btun {
     padding-right: 29px !important;
 }
@@ -37,9 +42,11 @@
     /* text-align: center; */
     padding-top: 100px;
 }
+
 .col1 {
     padding-top: 30px;
 }
+
 .login {
     text-decoration: none;
     color: var(--yellow);
@@ -49,40 +56,50 @@
     text-decoration: none;
     color: var(--white);
 }
+
 .login:hover {
     text-decoration: none;
     color: var(--yellow);
 }
+
 .ragister {
     color: var(--white);
 }
+
 .sectioncard {
     border-radius: 30px;
     color: var(--black);
     top: 12px;
 }
+
 .card-img {
     height: 100%;
 }
+
 .card1 {
     height: 100%;
 }
+
 .img-fluid {
     max-height: 100%;
 }
+
 .cardimage {
     border-top-left-radius: 25px;
     border-end-start-radius: 25px;
 }
+
 .btncard {
     border-radius: 50px;
     background-color: var(--pink);
     border: none;
 }
+
 .btncard:hover {
     background-color: var(--pink);
     border: none;
 }
+
 .cardinput {
     border-radius: 20px;
 }
@@ -92,13 +109,16 @@
     color: var(--white);
     border-radius: 5px;
 }
+
 .read {
     background-color: var(--antiquewhite);
 }
+
 .sectioncard {
     border-radius: 20px;
     border: none;
 }
+
 .sectionimg {
     background-color: var(--pink);
     /* margin: -12px; */
@@ -107,27 +127,32 @@
 
     height: 150px;
 }
+
 .footerimage {
     height: 100px !important;
     width: 200px !important;
 }
+
 .footerimage1 {
     text-align: center;
 }
+
 .footericon1 {
     text-decoration: none;
     color: var(--black);
 }
+
 .footericon1:hover {
     color: var(--black);
 }
+
 .footer {
     background-color: var(--green);
 }
 
 /* login register */
 .testimonial-slider {
-    background-color: var(--blue);
+    background-color: var(--purple);
 }
 
 .card {
@@ -135,10 +160,14 @@
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
 }
-.carousel-dark{
+
+.carousel-dark {
     padding: 50px !important;
+    background-image: linear-gradient(white, pink, #4c528e);
+
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
     width: 8em;
     height: 3em;
     top: 25%;
@@ -146,9 +175,11 @@
     left: 16em;
     margin-top: 70px;
 }
-.carousel-control-prev:hover{
+
+.carousel-control-prev:hover {
     text-decoration-line: underline;
 }
+
 .carousel-control-next {
     width: 5em;
     height: 3em;
@@ -157,6 +188,7 @@
     left: 24em;
     margin-top: 70px;
 }
+
 @media (min-width: 576px) {
     .carousel-item {
         margin-right: -2rem;
@@ -169,7 +201,9 @@
         display: flex;
     }
 }
+
 @media (min-width: 768px) {
+
     .carousel-control-prev,
     .carousel-control-next {
         opacity: 1;
@@ -179,4 +213,3 @@
 .carousel-control {
     margin-left: 28% !important;
 }
-

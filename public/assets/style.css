@@ -1,0 +1,3978 @@
+@font-face {
+    font-family: 'TT Norms Pro Bold';
+    /* src: url('../font/TT Norms Pro Bold.otf') format("opentype"); */
+    src: url('../assets/fonts/TT Norms Pro Bold.otf') format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTNorms-Bold';
+    src: url('../assets/fonts/TTNorms-Bold.otf') format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTNorms-Regular';
+    src: url('../assets/fonts/TTNorms-Regular.otf') format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro Medium';
+    src: url('../assets/fonts/TT Norms Pro Medium.otf') format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro Regular';
+    src: url('../assets/fonts/TT Norms Pro Regular.otf') format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro Light';
+    src: url('../assets/fonts/TT Norms Pro Light.otf') format("opentype");
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'TTNorms-Regular';
+    font-size: 18px;
+    color: #5D5D5D;
+}
+
+header {
+    background-color: #FFFDF8;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar-brand img {
+    width: 160px;
+    margin: 0 auto;
+    display: block;
+    margin: 0 20px 0 20px;
+    /* padding-bottom: 20px; */
+}
+
+a {
+    color: #5D5D5D;
+}
+
+ul {
+    padding: 0px;
+}
+
+.img-box img {
+    width: 500px;
+}
+
+h1.heading-txt {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 48px;
+    color: #1A2942;
+}
+
+h2.heading-text {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 48px;
+    color: #000;
+}
+
+h1.heading-txt.otp-txt {
+    font-size: 22px;
+}
+
+h1.heading-txt.otp-txt {
+    font-size: 22px;
+}
+
+.health-txt {
+    font-size: 87px !important;
+    line-height: 90px;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.phone-section h2.heading-txt {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Bold';
+}
+
+.phone-section p {
+    font-size: 24px;
+    font-family: 'TT Norms Pro Regular';
+}
+
+.massege-img-box img {
+    width: 630px;
+    margin-top: 58px;
+    z-index: 99;
+    position: relative;
+}
+
+.layer-one img {
+    width: 200px;
+    position: absolute;
+    right: -37px;
+    top: 103px;
+    z-index: 2;
+}
+
+.capsule img {
+    position: absolute;
+    width: 335px;
+    left: -19px;
+    top: 103px;
+    z-index: 0;
+    background: transparent;
+    mix-blend-mode: overlay;
+}
+
+.layer-img img {
+    position: absolute;
+    top: 7px;
+    d: overlay;
+    mix-blend-mode: multiply;
+    width: 514px;
+    left: 57px;
+}
+
+.round-img img {
+    position: absolute;
+    width: 260px;
+    right: 148px;
+    top: -14px;
+
+}
+
+.layer-img img {
+    position: absolute;
+    top: 16px;
+    mix-blend-mode: multiply;
+    width: 500px;
+    z-index: 0;
+}
+
+.find-txt-p,
+.health-txt-p {
+    font-family: 'TT Norms Pro Regular' !important;
+    font-size: 38px !important;
+    line-height: 40px;
+    margin-bottom: 100px;
+    color: #000;
+}
+
+h1.heading-txt.book-txt {
+    color: #fff !important;
+}
+
+.find_section {
+    padding: 80px 0px;
+}
+
+.book-box {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.people-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.people-txt h1 {
+    color: #E17296 !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #5D5D5D;
+    font-weight: 600;
+    font-family: 'TT Norms Pro Bold';
+
+}
+
+.box-shdow {
+    box-shadow: 5px 7px 12px -7px #888888;
+
+}
+
+a.login-btn {
+    background-color: rgb(41, 64, 124);
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 5px;
+    color: rgb(255, 255, 255) !important;
+    font-family: "TT Norms Pro Medium";
+    font-size: 16px;
+    padding: 5px 17px;
+    margin-top: 25px;
+}
+
+li.nav-item {
+    padding: 0px 20px;
+}
+
+li.nav-item a {
+    font-size: 18px;
+}
+
+.login-btn:hover {
+    background-color: #1A2942;
+    border: 1px solid #707070;
+    border-radius: 25px;
+}
+
+a.verfiy-btn {
+    background-color: #FF8686 !important;
+    text-transform: uppercase;
+    margin-top: 20px;
+    width: 36% !important;
+    margin: auto;
+    padding: 18px 0 !important;
+}
+
+a.book-btn {
+    border-radius: 100px;
+    padding: 24px 40px;
+    background-color: #5D51A3;
+    box-shadow: 0px 0px 3px #888888;
+    font-family: 'TT Norms Pro Regular';
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 20px;
+    word-spacing: 2px;
+    width: 50%;
+    display: block;
+    text-align: center;
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
+    -o-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+}
+
+.book-btn:hover {
+    letter-spacing: 2px;
+    font-family: 'TT Norms Pro Bold';
+}
+
+.login-btn img {
+    margin-right: 6px;
+    margin-top: -3px;
+    width: unset;
+}
+
+.container {
+    max-width: 1470px;
+}
+
+.main-banner {
+    background-image: linear-gradient(#fff, #d3838a, #253868);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 146px !important;
+    padding-bottom: 100px;
+}
+
+.pink-banner {
+    background-image: linear-gradient(#ffffff, #ffdade, #E17296, #E17296);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 210px !important;
+    padding-bottom: 150px;
+}
+
+.recommed-bannerer {
+    background: #f9c650;
+    background: linear-gradient(0deg,
+            #eb6a77 0.00%,
+            #ffc4d6 51.72%,
+            rgb(237 237 237 / 0%) 100.00%);
+    padding-top: 210px !important;
+    padding-bottom: 60px;
+}
+
+
+.consult-section {
+    animation: scrollAnimation 3s;
+}
+
+.pickup-section {
+    animation: scrollAnimation 2s;
+}
+
+.pink-section {
+    animation: scrollAnimation 1.5s;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+.pink-banner {
+    background-image: linear-gradient(#ffffff, #ffdade, #E17296, #E17296);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 210px !important;
+    padding-bottom: 150px;
+}
+
+.delicate-banner {
+    background-color: #5B5B91;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 300px !important;
+    padding-bottom: 300px;
+}
+
+.yellow-section {
+    background-image: linear-gradient(#ffffff, #ffdadd, #E17296);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 146px !important;
+    padding-bottom: 150px;
+}
+
+.pink-banner {
+    background-image: linear-gradient(#ffffff, #fbb3b9, #E17296);
+}
+
+.fimily-box li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.mention {
+    display: flex;
+}
+
+.mention-txt input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 18px;
+    font-family: 'TT Norms Pro Light';
+    font-style: italic;
+    width: 388%;
+}
+
+.fimily-box li:last-child {
+    margin-right: 0px;
+}
+
+.fimily-box ul {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.fimily-box {
+    font-family: 'TT Norms Pro Medium';
+    font-size: 22px;
+}
+
+.fimily-box input[type="checkbox"]::before {
+    /* ...existing styles */
+
+    /* Windows High Contrast Mode */
+    background-color: #FF8686;
+}
+
+.fimily-box input[type="checkbox"] {
+    color: #FF8686;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(4.925px);
+}
+
+/*our package section css*/
+.yellow-box {
+    background-image: linear-gradient(#ffffff, #fcfd9b, #ffcc59);
+    border-radius: 25px;
+    margin: 0px 100px;
+    padding: 20px 0px;
+}
+
+a.btn-package {
+    margin-bottom: 20px !important;
+    text-align: center;
+    margin: auto;
+    padding: 15px 40px;
+    border: 1px solid #000;
+    width: 620px;
+    display: block;
+    text-decoration: underline;
+    color: #000;
+    border-radius: 15px;
+    font-size: 24px;
+    font-family: 'TT Norms Pro Regular';
+}
+
+.our_package h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #1A2942;
+    font-family: 'TT Norms Pro Bold';
+    line-height: 84px;
+}
+
+.our_package p {
+    color: #1A2942;
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.pick-section {
+    background: #E17296;
+    color: #fff;
+    padding: 40px 0px;
+}
+
+.pick-section img {
+    position: absolute;
+    width: 600px;
+    top: -195px;
+    right: 0;
+}
+
+.pickup-section {
+    background: #EB768E;
+    color: #fff;
+    padding: 40px 0px;
+}
+
+.consult-section {
+    background: #EC6E7A;
+    color: #fff;
+    padding: 40px 0px;
+}
+
+.Schedule-txt {
+    padding: 30px 0px;
+}
+
+.phone-section {
+    padding: 100px 0px;
+}
+
+.lock-box {
+    margin: auto;
+    text-align: center;
+}
+
+.lock-box img {
+    width: 120px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.main-banner p {
+    font-family: 'TT Norms Pro Medium';
+    font-size: 24px;
+    color: #000;
+    line-height: 27px;
+    font-weight: 200;
+}
+
+.login-txt {
+    color: #FE8586;
+}
+
+.login-txt a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #FE8586 !important;
+}
+
+.img-box {
+    margin-top: 43px;
+}
+
+.form_box {
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 60px 60px;
+    box-shadow: 0px 1px 10px #888888;
+}
+
+.form_box input[type="number"] {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 13px;
+}
+
+button.otp-btn {
+    border-radius: 100px;
+    padding: 15px 80px;
+    background-color: #FF8686;
+    border: 1px solid #bbbbbb;
+    font-family: 'TT Norms Pro Bold';
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.click-txt h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    font-family: 'TT Norms Pro Bold';
+}
+
+.click-txt a {
+    margin-right: 55px;
+}
+
+.form-cont {
+    margin-top: 155px;
+}
+
+a.text-end {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: #2E42D9;
+    text-decoration: underline;
+}
+
+.blue-section {
+    background-color: #29407C;
+    padding: 80px 249px;
+}
+
+.call-img-box img {
+    width: 90px;
+    height: 90px;
+}
+
+.call-img-box {
+    background-color: #EC6E7A;
+    border-radius: 20px;
+    padding: 55px 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.call-img-box:hover {
+    transition-delay: 0.19s;
+    border-radius: 100px;
+}
+
+
+.book-txt-p {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Regular';
+    color: #fff;
+}
+
+.otp-center {
+    width: 900px;
+    background-color: #fff;
+    padding: 47px 90px;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.otp-txt-p {
+    font-family: 'TT Norms Pro Light';
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.delicate-banner .input-flex input[type="text"] {
+    color: #EAEAEA;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    background-color: #EAEAEA;
+    border: 1px solid;
+    margin: 0px 10px;
+}
+
+.delicate-banner .input-flex {
+    margin-bottom: 30px;
+}
+
+.people-section {
+    background-color: #fff;
+    padding: 100px 100px;
+    box-shadow: 1px 1px 23px -14px #000;
+}
+
+.people-section:hover {
+    border-radius: 20px;
+}
+
+.people-section a {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'TT Norms Pro Bold';
+    text-decoration: underline;
+    color: #000;
+}
+
+.people-section .book-box {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.people-section q {
+    font-size: 24px;
+    font-family: 'TT Norms Pro Medium';
+    color: #000;
+}
+
+.fint-box img {
+    width: 80px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 85px;
+}
+
+.fint-box {
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #d5d5d5;
+    padding: 25px 17px;
+}
+
+.fimily-box {
+    border-radius: 20px;
+    border: 1px solid #d5d5d5;
+    padding: 30px 20px;
+    margin-bottom: 12px;
+}
+
+.fint-box p {
+    font-family: 'TT Norms Pro Light';
+    color: #000;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.click-txt img {
+    width: 40px;
+}
+
+.fint-box span {
+    font-family: 'TT Norms Pro Light';
+
+}
+
+.footer-area {
+    background-color: #F7F9FA;
+}
+
+.footer-area .footer-top {
+    padding: 60px 10px 30px 10px;
+    word-break: break-word;
+}
+
+.widget.footer-widget {
+    background-color: transparent !important;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.footer-area .widget-title::after {
+    content: "";
+    clear: both;
+    display: table;
+    height: 2px;
+    width: 40px;
+    background: #FF8686;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.copyright-area .copyright-area-inner::before {
+    content: "";
+    clear: both;
+    display: inline-block;
+    height: 2px;
+    width: 40px;
+    background-color: #FF8686;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.copyright-area {
+    padding: 20px 0;
+    text-align: center;
+    color: #838282;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.footer-area .logo-widget img {
+    margin-bottom: 20px;
+    width: 170px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.widget.footer-widget p,
+.footer-widget.widget_tag_cloud .tagcloud a,
+.widget.footer-widget.widget_calendar caption,
+.widget.footer-widget.widget_calendar th,
+.widget.footer-widget.widget_calendar td {
+    color: #707070;
+}
+
+.footer-widget.widget.widget_nav_menu.mrg {
+    margin-top: 69px;
+}
+
+.footer-area .widget_nav_menu ul li {
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.widget.footer-widget .widget-title {
+    color: #707070;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer-widget p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.footer-area .logo-widget ul li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .86rem;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+
+.footer-area .logo-widget ul li .icon {
+    padding-right: 8px;
+    font-size: 12px;
+    color: #838282;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-area .footer-social-icon .icon {
+    font-size: 18px;
+    color: #838282;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    margin-right: 5px;
+}
+
+.carousel .item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.carousel .item a {
+    color: #eb7245;
+}
+
+.carousel .img-box {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+}
+
+.carousel .overview {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.carousel .overview b {
+    color: #333;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.carousel .star-rating i {
+    font-size: 18px;
+    color: #ffdc12;
+}
+
+.carousel .carousel-control {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #999;
+    text-shadow: none;
+    top: 4px;
+}
+
+.carousel-control i {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.carousel-control.left {
+    left: auto;
+    right: 40px;
+}
+
+.carousel-control.right i {
+    margin-right: -2px;
+}
+
+.carousel .carousel-indicators {
+    bottom: 15px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 11px;
+    height: 11px;
+    margin: 1px 5px;
+    border-radius: 50%;
+}
+
+.carousel-indicators li {
+    background: #e2e2e2;
+    border-color: transparent;
+}
+
+.carousel-indicators li.active {
+    border: none;
+    background: #888;
+}
+
+.minus {
+    background: #5D51A3;
+}
+
+.plus {
+    background: #EC6E7A;
+}
+
+.minus,
+.plus {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 2px 5px 9px 4px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.number input {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'TT Norms Pro Medium';
+}
+
+a.btn {
+    border-radius: 25px;
+    background: #29407C;
+    color: #fff;
+    padding: 12px 45px;
+
+}
+
+.slider_data .inner li {
+    display: flex;
+    font-size: 24px;
+    font-family: 'TT Norms Pro Bold';
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.slider_data .inner img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.slider_data .inner p {
+    text-align: left !important;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    max-width: 440px;
+}
+
+.slider_data .inner h2 {
+    text-align: left !important;
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.tick {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.tick img {
+    width: 160px !important;
+}
+
+.recommed-banner {
+    background: #f9c650;
+    background: linear-gradient(0deg,
+            #f1ce7c 0.00%,
+            rgb(255 255 224 / 32%) 51.72%,
+            rgb(237 237 237 / 0%) 100.00%);
+    padding-top: 119px;
+}
+
+
+.title-heading {
+    font-family: TTNorms-Bold;
+    font-weight: bold;
+    font-style: normal;
+    color: #1a2942;
+    margin-top: 50px;
+}
+
+h1.title-heading {
+    font-size: 48px;
+}
+
+
+h2.title-heading {
+    font-size: 36px;
+}
+
+.title-sub-heading {
+    font-family: 'TT Norms Pro Regular';
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 48px;
+    font-style: normal;
+    color: #1a2942;
+}
+
+
+.recommed-banner {
+    padding-bottom: 70px;
+
+}
+
+span.icon-no {
+    color: #ffff;
+    background: #EC6E7A;
+    border-radius: 50%;
+    padding: 8px 11px;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+}
+
+.process-section {
+    margin-top: 105px;
+
+}
+
+.recommed-banner div.text {
+    margin-top: 90px;
+}
+
+.btn-blue {
+    border-radius: 56px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    background: #29407c;
+    padding: 11px 50px;
+    margin-left: 0px;
+}
+
+.packages-section {
+    padding-left: 240px !important;
+    width: 100%;
+    margin: 0px auto;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.carousel {
+    padding-left: 240px !important;
+    width: 100%;
+    margin: 0px auto;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.carousel-two .slick-list.draggable {
+    padding-top: 20px;
+}
+
+.slick-slide {
+    margin: 16px;
+}
+
+.wrapper .slick-dots li button:before {
+    font-size: 20px;
+    color: white;
+}
+
+.slider-prev {
+    position: absolute;
+    right: 0px;
+    /* top: 240px; */
+    z-index: 9;
+    left: -70px;
+    width: 100%;
+    height: 100%;
+    max-width: 16px;
+}
+
+.slider-next {
+    position: absolute;
+    right: -70px;
+    top: 290px;
+    width: 33px;
+    height: 33px !important;
+    z-index: 9;
+
+}
+
+.comment-next {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 8px;
+    height: 100% !important;
+    z-index: 9;
+}
+
+.comment-prev {
+    position: absolute;
+    right: 0px;
+    /* top: 240px; */
+    z-index: 9;
+    left: -70px;
+    width: 100%;
+    rotate: 180deg;
+    height: 100%;
+    max-width: 8px;
+}
+
+.box {
+    background-color: #fff;
+    color: #111;
+    border-radius: 20px;
+    padding: 41px 30px 20px 30px;
+    width: 430px;
+}
+
+.image-section .poster-img {
+    width: 180px;
+    margin-bottom: -44px !important;
+    position: relative;
+    top: -23px;
+    margin-top: 0px !important;
+}
+
+.packages-box-coursel {
+    background-color: #fff;
+    color: #111;
+    width: 420px !important;
+    border-radius: 20px;
+    padding: 41px 16px 20px 50px;
+    width: 30%;
+    margin-right: 25px;
+    margin-bottom: 80px;
+}
+
+.packages-box-coursel .package-img {
+    width: 200px;
+
+    margin-bottom: -17px;
+    margin-top: -120px;
+}
+
+.packages-box-coursel .package-heading {
+    font-family: TTNorms-Bold;
+    font-weight: bold;
+    font-style: normal;
+    color: #1a2942;
+    font-size: 26px;
+}
+
+.packages-box-coursel .price-text {
+    font-family: TTNorms-Bold;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 53px;
+    font-style: normal;
+    text-align: left;
+    color: #ec6e7a;
+}
+
+.packages-box-coursel h3 {
+    font-family: 'TT Norms Pro Regular';
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 25px;
+    font-style: normal;
+    margin-bottom: 20px;
+    color: #1a2942;
+    min-height: 100px;
+}
+
+.packages-box {
+    background-color: #fff;
+    color: #111;
+    width: 450px !important;
+    border-radius: 20px;
+    padding: 41px 50px 20px 50px;
+    width: 30%;
+    margin-right: 40px;
+    margin-bottom: 80px;
+}
+
+.packages-box-coursel .package-img {
+    width: 170px;
+    margin-bottom: -17px;
+    margin-top: -150px;
+}
+
+.package-heading {
+    font-family: TTNorms-Bold;
+    font-weight: bold;
+    font-style: normal;
+    color: #1a2942;
+    font-size: 32px;
+}
+
+.price-text {
+    font-family: TTNorms-Bold;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 53px;
+    font-style: normal;
+    text-align: left;
+    color: #ec6e7a;
+}
+
+.packages-box h3 {
+    font-family: 'TT Norms Pro Regular';
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+    font-style: normal;
+    color: #1a2942;
+    min-height: 125px;
+}
+
+.box h3 {
+
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.poster-img {
+    width: 180px;
+
+    margin-bottom: -17px;
+    margin-top: -60px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin: 18px 0px;
+}
+
+.box-item {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+
+.icon-text,
+.tell-me-text {
+    justify-content: center;
+
+}
+
+.box-pack {
+    justify-content: space-between;
+}
+
+.icon-text img {
+    width: 22px;
+}
+
+.icon-text h2 {
+    font-family: TTNorms-Bold;
+    font-size: 24px;
+    color: #152944;
+    margin-left: 14px;
+}
+
+.tell-me-text h6 {
+    font-family: 'TT Norms Pro Light';
+}
+
+.tell-me-text img {
+    width: 30px;
+    padding-left: 14px;
+    margin-top: -5px;
+
+}
+
+.box-icon img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    padding: 40px 40px;
+    /* background: red; */
+    filter: drop-shadow(5px 5px 7.5px rgba(0, 0, 0, 0.16));
+    background: #ffffff;
+
+}
+
+h2.box-heading {
+    padding-top: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #1a2942;
+}
+
+.slick-slider .element {
+    height: 100px;
+    width: 100px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.slick-slider .slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.time-txt {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.time-txt img {
+    width: 40px;
+    margin-right: 13px;
+}
+
+.time-txt p {
+    font-family: 'TT Norms Pro Regular';
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: #1A2942;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+}
+
+.step-section li {
+    display: inline-block;
+    margin-right: 120px;
+}
+
+.step-section ul {
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+}
+
+.step-section img {
+    width: 40px;
+}
+
+.step-section .active img {
+    width: 75px;
+    background: #FF8686;
+    padding: 15px 15px;
+    border-radius: 50px;
+}
+
+.step-section img {
+    width: 75px;
+    padding: 15px 15px;
+    border-radius: 50px;
+    border: 1px solid #eee;
+}
+
+.step-section p {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+    width: 106px;
+    margin-top: 10px;
+    line-height: 17px;
+}
+
+.step-section li.active:before,
+.step-section li.active:after {
+    background: #FF8686;
+
+}
+
+.step-section li.sade.active:before,
+.step-section li.sade.active:after {
+    background: linear-gradient(10deg,
+            #f95077 0.00%,
+            rgb(251 251 251 / 32%) 51.72%,
+            rgba(224, 209, 148, 0) 100.00%);
+}
+
+
+
+
+.step-section li:after {
+    content: '';
+    width: 151%;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 80%;
+    top: 38px;
+    z-index: -1;
+}
+
+.step-section li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 20%;
+    float: left;
+    position: relative;
+}
+
+.main-form input,
+.main-form select {
+    border: 1px solid #eee;
+    width: 29%;
+    margin: auto;
+    text-align: left;
+    padding: 14px 26px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.main-form {
+    display: grid;
+    margin-top: 27px;
+}
+
+.text-urine {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 36px;
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.text-date {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 24px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.text-date span {
+    background: #fff;
+    padding: 8px 15px;
+    margin: 0px 15px;
+    border-radius: 5px;
+    color: #FF8686;
+}
+
+
+
+a.details-btn {
+    background: #5D51A3;
+    color: #fff;
+    font-family: 'TT Norms Pro Medium';
+    font-size: 33px;
+    padding: 18px 40px;
+    border-radius: 50px;
+    margin-top: 57px;
+    font-weight: 400;
+}
+
+.about-section {
+    width: 1198px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: left !important;
+}
+
+.about-section .title-sub-heading {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center !important;
+}
+
+.about-section h1 {
+    text-align: center !important;
+}
+
+.setting-txt p {
+    font-size: 24px;
+    font-family: 'TT Norms Pro Regular';
+    margin-right: 169px;
+    color: #1A2942;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+.yellow-circle img {
+    width: 100px;
+    position: absolute;
+    top: -58px;
+    left: -44px;
+}
+
+.years-txt h2 {
+    font-size: 80px;
+    color: #29407C;
+    margin-bottom: -10px;
+    font-weight: 900;
+}
+
+.years-txt p {
+    border-bottom: 4px solid #fff;
+    font-size: 26px;
+    padding-bottom: 15px;
+    color: #29407C;
+    width: 240px;
+
+}
+
+.Surgeries p {
+    min-height: 70px;
+}
+
+.packages-rate {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    border-bottom: 2px solid #eee;
+}
+
+.packages-rate img {
+    width: 30px;
+}
+
+.packages-rate h4 {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Light';
+}
+
+.packages-rate h4 {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Light';
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.packages-rate h4 {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Regular';
+    padding-bottom: 10px;
+}
+
+.packages-rate h3 {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Bold';
+    padding-bottom: 10px;
+    color: #000;
+}
+
+.inf-txt li {
+    margin-bottom: 10px;
+    background: #1A2942;
+    list-style: none;
+    display: inline-block;
+    color: #fff;
+    padding: 3px 22px;
+    border-radius: 10px;
+    margin-right: 19px;
+}
+
+ul.inf-txt {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.test-box {
+    border-right: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.women-box {
+    background-color: #29407C;
+    padding: 60px 0px;
+    margin-top: 500px;
+}
+
+.women-box img {
+    text-align: center;
+    margin: auto;
+    margin-top: -675px;
+    width: 800px;
+    z-index: 11;
+}
+
+form.details-form {
+    width: 45%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.details-form input {
+    border-radius: 9px;
+    display: block;
+    padding: 14px 0px;
+    border: 1px solid #eee;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.details-form label {
+    font-family: 'TT Norms Pro Regular';
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.phn-txt a {
+    text-align: right;
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #447DDD;
+    margin-top: 4px;
+}
+
+.details-form input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    color: #FF8686;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(4.925px);
+    margin-bottom: 40px;
+}
+
+.checkup-txt {
+    padding-top: 100px;
+}
+
+.checkup-txt h2 {
+    font-family: 'TT Norms Pro Bold';
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.checkup-txt p {
+    font-family: 'TT Norms Pro Regular';
+    font-size: 36px;
+    line-height: 40px;
+    color: #000;
+    margin-bottom: 40px;
+    margin-right: 246px;
+}
+
+.border-right {
+    border-right: 1px solid #eee;
+}
+
+.checkup-txt li {
+    font-size: 30px;
+    display: inline-block;
+    border: 1px solid #1A2942;
+    padding: 7px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: #000;
+}
+
+.blod-txt {
+    padding-top: 50px !important;
+}
+
+.checkup-txt ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.checkup-txt img {
+    width: 400px;
+    margin-top: -144px;
+}
+
+.book-txt img {
+    width: 22px !important;
+    margin: 0px;
+    margin-right: 7px;
+    margin-top: -4px;
+}
+
+.book-txt p {
+    text-align: center;
+    font-size: 46px;
+    font-family: 'TT Norms Pro Bold';
+    color: #fff;
+}
+
+a.book-btn.btn {
+    color: #000 !important;
+    background: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 15px 72px;
+    border-radius: 50px;
+    font-size: 33px;
+    font-family: 'TT Norms Pro Medium';
+    width: 80%;
+    margin: auto;
+}
+
+.home-box img {
+    width: 50px;
+    margin-right: 10px;
+    margin-top: -17px;
+}
+
+.box-home {
+    width: 88%;
+    margin: auto;
+}
+
+section.main-banner.packages-section {
+    padding-left: 0px !important;
+}
+
+.box-home p {
+    font-size: 24px;
+    font-family: 'TT Norms Pro Regular';
+}
+
+.box-home h3 {
+    font-size: 24px;
+    font-family: 'TT Norms Pro Bold';
+    margin: 20px 0;
+    g color: #000;
+}
+
+.box-img img {
+    width: 700px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+.home-box.row {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px 40px;
+    margin: 0 50px;
+}
+
+.home-box h3 {
+    font-family: 'TT Norms Pro Regular';
+    color: #ED7580;
+    border-bottom: 7px solid #ED7580;
+    padding-bottom: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.home-box p {
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 2px solid #707070;
+    border-radius: 10px;
+    padding: 8px 4px;
+    text-align: center;
+    font-family: 'TT Norms Pro Medium';
+    width: 88%;
+}
+
+.home-box li {
+    list-style: none;
+    padding: 0px;
+    font-size: 24px;
+    font-family: 'TT Norms Pro Medium';
+}
+
+.home-box ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.blue-box li::before {
+    background: #29407C !important;
+}
+
+.home-box li::before {
+    background: #ED7580;
+    content: "";
+    width: 20px;
+    display: inline-flex;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.blue-box h3 {
+    color: #29407C !important;
+    border-bottom: 7px solid #29407C !important;
+}
+
+.blue-box p {
+    text-align: left;
+}
+
+section.pink-section {
+    padding: 100px 0;
+    background-image: linear-gradient(#ffffff, #ffdade, #E17296, #E17296);
+    background-size: cover;
+}
+
+.slider-package-item .slider_data {
+    width: 633px;
+
+}
+
+.slider-package-item .slick-list.draggable {
+    width: 633px;
+    position: relative;
+    left: 394px;
+}
+
+
+.book-box .slick-dots {
+    top: unset !important;
+    overflow: hidden;
+}
+
+p.author {
+    margin: 15px 0px;
+}
+
+.book-box .slick-dots li.slick-active button {
+    background-color: #000000 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 10px;
+    height: 10px;
+
+}
+
+.book-box .slick-dots li button:before {
+    font-size: 45px;
+    top: -6px;
+    left: -5px;
+}
+
+.slider_data .inner li {
+    display: flex;
+    font-size: 24px;
+    font-family: 'TTNorms-Bold';
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.slider_data .inner img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.slider_data .inner p {
+    text-align: left !important;
+    font-family: TTNorms-Regular;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    max-width: 440px;
+}
+
+.slider_data .inner h2 {
+    text-align: left !important;
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.tick {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.tick img {
+    width: 160px !important;
+}
+
+
+.view-deatils a {
+    float: right;
+    color: #000;
+    padding-right: 70px;
+    padding-bottom: 10px;
+}
+
+.view-grid a {
+    float: right;
+    color: #000;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+
+.ui-widget-content {
+    background: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+a.ui-state-default,
+.ui-widget-content {
+    font-family: 'TT Norms Pro Light' !important;
+    border: 1px solid #ffffff !important;
+    background: #ffffff !important;
+    font-weight: bold !important;
+    color: #C3C3C3 !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+
+.ui-datepicker th {
+    font-weight: 100 !important;
+}
+
+.ui-widget-header {
+    font-family: 'TT Norms Pro Bold' !important;
+    border: unset !important;
+    background: #ffffff !IMPORTANT;
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+.ui-widget-header .ui-icon {
+    background-size: cover;
+    background: url('../assets/images/click.svg') !important;
+}
+
+
+.footer-section {
+    display: none;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 1.5em;
+    height: 5.5px;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    color: #CBCBCB;
+    background: #CBCBCB;
+    border-radius: 100px;
+    margin: 3px 0;
+}
+
+.navbar button:focus {
+    outline: 1px dotted;
+    outline: none;
+}
+
+a.book-btn.d-b {
+    display: none;
+}
+
+.col-lg-n.col-md-6.d-n {
+    display: none;
+}
+
+.packages-rate li {
+    font-size: 36px;
+    font-family: 'TT Norms Pro Bold' !important;
+    list-style: none;
+}
+
+ul.inf-txt li {
+    font-size: 23px !important;
+}
+
+.row.amount-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #dddd;
+    padding-top: 46px;
+}
+
+.amount-txt img {
+    width: 18px !important;
+    margin-top: -5px;
+}
+
+a.login-btn.mobile-btn {
+    display: none;
+}
+
+.hidden-box {
+    display: none;
+}
+
+.fimily-box li input:checked {
+    display: none;
+}
+
+.fimily-box li input:checked~.checkmark:before {
+    background: none;
+    border: 2px solid #fff;
+    width: 6px;
+    top: 2px;
+    left: 9px;
+    border-top: 0;
+    border-left: 0;
+    height: 13px;
+    top: 2px;
+}
+
+.cancer-input input:checked~.checkmark {
+    content: url(../img/cancer.svg);
+}
+
+.fimily-box li input:checked~.checkmark {
+
+    background: #ff8686;
+    width: 27px;
+    padding: 5px;
+    display: inline-block;
+    top: 3px;
+    position: relative;
+    height: 27px;
+    border-radius: 5px;
+}
+
+input:checked~.check-text {
+    color: #1A2942;
+    font-weight: 600;
+}
+
+.fimily-box .check-text {
+    font-family: 'TTNorms-Regular';
+    padding-left: 12px;
+    color: #1A2942;
+}
+
+.testimonial .slick-dots li button {
+
+    width: 0px !important;
+    height: 0px !important;
+}
+
+.testimonial .slick-dots li {
+    height: 23px !important;
+}
+
+
+.testimonial .slider_data {
+    margin-left: 0px;
+}
+
+.book-box .slick-dots li.slick-active button {
+    background-color: #000000 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 50% !important;
+
+
+}
+
+.ui-widget-content {
+    background: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+a.ui-state-default,
+.ui-widget-content {
+    font-family: 'TT Norms Pro Light' !important;
+    border: 1px solid #ffffff !important;
+    background: #ffffff !important;
+    font-weight: bold !important;
+    color: #C3C3C3 !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+}
+
+a.ui-state-default.ui-state-active {
+    background: #ed7580 !important;
+    color: #fff !important;
+    border-radius: 50%;
+    width: 32px !important;
+    padding: 3px !important;
+    margin: 0px 10px !important;
+}
+
+.ui-datepicker {
+    width: 375px !important;
+}
+
+.ui-datepicker td a {
+    padding: 14px !important;
+}
+
+.ui-state-active {
+    background: red !important;
+}
+
+.ui-datepicker th {
+    font-weight: 100 !important;
+}
+
+.ui-widget-header {
+    font-family: 'TT Norms Pro Bold' !important;
+    border: unset !important;
+    background: #ffffff !IMPORTANT;
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    letter-spacing: 2px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+.ui-widget-header .ui-icon {
+    background-size: cover;
+    background: url('file:///E:/xampp/htdocs/mayflower/img/click.svg') !important;
+}
+
+img.package-img {
+    margin-top: -139px;
+}
+
+.date-input {
+    text-align: center;
+    position: relative;
+    left: -56px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+}
+
+.date-input img {
+    position: relative;
+    top: -11px;
+    right: -80px;
+    width: 65px;
+    padding: 12px;
+    border-radius: 7px;
+}
+
+.date-input input {
+    padding-left: 85px;
+    padding-top: 30px;
+}
+
+.date-input span {
+    color: #1A2942;
+    font-size: 16px;
+    position: relative;
+    top: -25px;
+    left: 191px;
+}
+
+.show_parameter {
+    display: none;
+    list-style: none;
+    width: 417px;
+    text-align: left;
+    background: #ffff;
+    margin: auto;
+    position: relative;
+    left: 54px;
+    top: -83px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+    border-radius: 7px;
+    padding: 22px;
+}
+
+ul.show_parameter li {
+    cursor: pointer;
+    font-family: 'TT Norms Pro Light';
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 11px;
+}
+
+li.selected {
+    color: #1A2942;
+    font-size: 18px !important;
+    /* font-family: 'TT Norms Pro Light'; */
+    font-family: 'TTNorms-Bold';
+    font-weight: 900 !important;
+    font-family: 'TT Norms Pro Bold';
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dddd;
+}
+
+li.selected::after {
+    content: url('../img/close.png');
+    position: absolute;
+    right: 43px;
+    top: -11px;
+    font-size: 49px;
+}
+
+ul.show_parameter .zoom-text:hover {
+    font-size: 30px;
+    padding: 0px 25px;
+    /* zoom: 2; */
+    background: #dddd;
+    width: 500px;
+}
+
+ul.show_parameter .zoom-text-disbled {
+    color: #dddd;
+}
+
+.amount-text li {
+    color: #000;
+}
+
+@media only screen and (max-width: 1800px) {
+
+    .call-img-box {
+
+        padding: 35px 20px;
+    }
+
+    .layer-one img {
+        width: 190px;
+        right: -13px;
+
+    }
+
+    section.our_package .slick-dots li {
+        width: 43% !important;
+    }
+
+    section.our_package .slick-dots li button {
+        font-size: 16px !important;
+        padding: 22px 25px !important;
+    }
+
+    .yellow-box {
+        margin: 0px 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .layer-one img {
+        width: 165px;
+        position: absolute;
+        right: -0px;
+        top: 103px;
+        z-index: 2;
+    }
+
+    .call-img-box {
+        width: 40%;
+    }
+
+    .container {
+        max-width: 1295px;
+    }
+
+    .blue-section {
+        background-color: #29407C;
+        padding: 80px 100px;
+    }
+
+    .yellow-box {
+        margin: 0px 40px;
+        padding: 20px 0px;
+    }
+
+    .mention-txt input[type="text"] {
+        width: 100%;
+    }
+
+    .about-section {
+        width: 100%;
+    }
+
+    .massege-img-box img {
+        width: 100%;
+    }
+
+    .round-img img {
+        position: absolute;
+        width: 27%;
+        right: 81px;
+        top: 39px;
+    }
+
+    .layer-img img {
+        position: absolute;
+        top: 16px;
+        mix-blend-mode: multiply;
+        width: 80%;
+        z-index: 0;
+    }
+
+    .capsule img {
+        position: absolute;
+        width: 51%;
+        top: 78px;
+        z-index: 0;
+        background: transparent;
+        mix-blend-mode: overlay;
+    }
+
+    .layer-one img {
+        width: 17%;
+        top: 89px;
+        z-index: 2;
+        right: 0;
+    }
+
+    .tick img {
+        width: 100% !important;
+    }
+
+    .slick-dots {
+        top: 10% !important;
+        transform: translateY(-50%);
+        bottom: unset;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+        display: flex !important;
+        overflow: scroll;
+    }
+
+    section.our_package .slick-dots li button {
+        font-size: 16px !important;
+        line-height: normal;
+        width: max-content !important;
+        height: auto;
+        color: #000;
+        padding: 15px 33px !IMPORTANT;
+        background-color: #fff;
+        margin-bottom: 15px !important;
+        border: 1px solid #152944;
+        border-radius: 15px;
+    }
+
+    section.our_package .slick-dots li {
+        width: auto !important;
+    }
+
+    .slider-package-item .slider_data {
+        width: auto;
+    }
+
+    .yellow-box {
+        margin: 0px 0px;
+        padding: 20px 0px;
+    }
+
+    .slider-package-item .slick-list.draggable {
+        width: 100%;
+        position: relative;
+        left: 0px;
+    }
+
+    a.btn-package {
+
+        width: 100%;
+    }
+
+    /*.slick-dots {
+    top: 45%;
+    width: 100%;
+    max-width: 1499px;
+  }
+  .slider_data .inner {
+    max-width: 100%;
+  }*/
+    section.our_package .slick-dots li {
+        height: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    section.our_package .slick-dots li:nth-child(5) {
+        margin: 0 0 0 0px !important;
+    }
+
+    section.our_package .slick-dots li:nth-child(1) {
+        margin: 0 0 0 0px !important;
+    }
+
+    section.our_package .slick-dots li:nth-child(4) {
+        justify-content: unset !important;
+    }
+
+    section.our_package .slick-dots li:nth-child(6) {
+        justify-content: unset !important;
+    }
+
+    section.our_package .slick-dots li:nth-child(8) {
+        justify-content: unset !important;
+    }
+
+    section.our_package .slick-dots li:nth-child(2) {
+        justify-content: unset !important;
+    }
+
+    /*.slick-dots {
+    top: 0%;
+    transform: translateY(-50%);
+    bottom: unset;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+  }*/
+    */
+
+    /*.slider-package-item .slider_data {
+    width: 100%;
+  }
+  .slider_data .inner {
+    max-width: 100%;
+    margin: 10px auto 40px;
+    padding: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+  }*/
+    .pick-section img {
+        position: absolute;
+        width: 100%;
+        top: -203px;
+        right: 0;
+    }
+
+    .setting-txt p {
+        font-size: 24px;
+        font-family: 'TT Norms Pro Regular';
+        margin-right: 0px;
+        color: #1A2942;
+        margin-bottom: 0px;
+        line-height: 30px;
+    }
+
+    .img-box img {
+        width: 100%;
+    }
+
+    .people-section {
+        border-radius: 16px;
+        background-color: #fff;
+        padding: 70px 70px;
+        box-shadow: 1px 1px 23px -14px #000;
+        margin: 0 1px;
+    }
+
+    .slider_data .inner {
+        max-width: 640px;
+        margin: 10px auto 40px;
+        padding: 30px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        top: 61px;
+    }
+
+    .packages-box {
+        background-color: #fff;
+        color: #111;
+        width: 390px !important;
+        border-radius: 20px;
+        padding: 41px 30px 20px 30px;
+        width: 30%;
+        margin-right: 40px;
+        margin-bottom: 80px;
+    }
+
+    .packages-box h3 {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 23px;
+        font-style: normal;
+        color: #1a2942;
+        min-height: 125px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .pick-section img {
+        position: absolute;
+        width: 100%;
+        top: -80px;
+        right: 0;
+    }
+
+    .checkup-txt p {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 30px;
+        line-height: 34px;
+        color: #000;
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    .blue-section {
+        background-color: #29407C;
+        padding: 80px 0px;
+    }
+
+    .health-txt {
+        font-size: 50px !important;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+
+    a.book-btn {
+        padding: 24px 70px;
+        width: 70%;
+        display: block;
+        text-align: center;
+    }
+
+    .find-txt-p,
+    .health-txt-p {
+        font-family: 'TT Norms Pro Regular' !important;
+        font-size: 24px !important;
+        line-height: 25px;
+        margin-bottom: 45px;
+        color: #000;
+    }
+
+    .carousel {
+        padding-left: 20px !important;
+        width: 100%;
+        margin: 0px auto;
+        font-weight: 600;
+        overflow: hidden;
+    }
+
+    .packages-section {
+        padding-left: 20px !important;
+        width: 100%;
+        margin: 0px auto;
+        font-weight: 600;
+        overflow: hidden;
+    }
+
+    .box-home {
+        width: 100%;
+        margin: auto;
+    }
+
+    .checkup-txt {
+        padding: 50px 0px;
+        text-align: left;
+    }
+
+    .home-box.row {
+        background: #fff;
+        border-radius: 17px;
+        padding: 20px 0px;
+        margin: 0 50px;
+    }
+
+    .packages-box-coursel {
+        background-color: #fff;
+        color: #111;
+        width: 360px !important;
+        border-radius: 20px;
+        padding: 41px 20px 20px 20px;
+        width: 30%;
+        margin-right: 25px;
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .pink-banner {
+        padding-top: 107px !important;
+        padding-bottom: 50px;
+        text-align: center !important;
+        margin: auto;
+    }
+
+    .recommed-bannerer {
+        padding-top: 107px !important;
+        padding-bottom: 50px;
+        text-align: center !important;
+        margin: auto;
+    }
+
+    a.book-btn {
+        padding: 24px 70px;
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+
+    footer.footer-area {
+        display: none;
+    }
+
+    .footer-section {
+        display: block;
+        width: 400px;
+        margin: auto;
+        align-items: center;
+        padding: 100px 0px;
+    }
+
+    h1.heading-txt {
+        font-size: 30px;
+        color: #1A2942;
+    }
+
+    .book-txt-p {
+        font-size: 22px;
+
+    }
+
+    .fimily-box li {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .delicate-banner {
+        background-color: #5B5B91;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 150px !important;
+        padding-bottom: 150px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .otp-center {
+        width: 100%;
+        background-color: #fff;
+        padding: 47px 80px;
+        max-width: 100%;
+        margin: auto;
+        border-radius: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-section li:last-child:after {
+        content: '';
+        width: 95%;
+        height: 5px;
+        background: white;
+        position: absolute;
+        left: 0%;
+        top: 38px;
+        z-index: -1;
+    }
+
+    .call-img-box {
+        width: 50%;
+    }
+
+    .checkup-txt img {
+        width: 100%;
+        margin-top: -18px;
+    }
+
+    a.book-btn.btn {
+        color: #000 !important;
+        background: #fff;
+        text-align: center;
+        margin: auto;
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-family: 'TT Norms Pro Medium';
+        width: 100%;
+        margin: auto;
+    }
+
+    .checkup-txt li {
+        font-size: 20px;
+        display: inline-block;
+        border: 1px solid #1A2942;
+        padding: 7px 12px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        margin-right: 10px;
+    }
+
+    .slider-package-item .slick-list.draggable {
+        width: 100%;
+        position: relative;
+        left: 0px;
+        top: 102px;
+    }
+
+    .slider_data .inner {
+        max-width: 640px;
+        margin: 10px auto 40px;
+        padding: 30px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        top: 6px;
+    }
+
+    .packages-box {
+        background-color: #fff;
+        color: #111;
+        width: 320px !important;
+        border-radius: 20px;
+        padding: 41px 30px 20px 30px;
+        width: 30%;
+        margin-right: 15px;
+        margin-bottom: 80px !important;
+        margin: auto;
+    }
+
+    img.package-img {
+        margin-top: -139px;
+        width: 138px;
+        position: relative;
+        top: 45px;
+    }
+
+    .btn-blue {
+        border-radius: 56px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        color: #ffffff;
+        background: #29407c;
+        padding: 11px 30px;
+        margin-left: 0px;
+    }
+
+    .packages-box h3 {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 21px;
+        font-style: normal;
+        color: #1a2942;
+        min-height: 114px;
+    }
+
+    .package-heading {
+        font-family: TTNorms-Bold;
+        font-weight: bold;
+        font-style: normal;
+        color: #1a2942;
+        font-size: 25px;
+        min-height: 92px;
+    }
+
+    .box-item .box-heading br {
+        display: contents !important;
+    }
+
+    .box-item h2.box-heading {
+        padding-top: 0px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        color: #1a2942;
+        margin-left: 5px;
+    }
+
+    span.icon-no {
+        color: #ffff;
+        background: #EC6E7A;
+        border-radius: 50%;
+        padding: 8px 11px;
+        font-size: 16px;
+        position: absolute;
+        z-index: 1;
+        top: 22px;
+        left: 9px;
+    }
+
+    .packages-box-coursel {
+        background-color: #fff;
+        color: #111;
+        width: 360px !important;
+        border-radius: 20px;
+        padding: 41px 20px 20px 20px;
+        width: 30%;
+        margin-right: 25px;
+        margin-bottom: 80px !important;
+        margin: auto;
+    }
+
+    .packages-section .packages-box-coursel {
+        background-color: #fff;
+        color: #111;
+        width: 300px !important;
+        border-radius: 20px;
+        padding: 41px 20px 20px 20px;
+        width: 30%;
+        margin-right: 5px !important;
+        margin-bottom: 80px;
+        align-items: center;
+        justify-content: ;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+
+    .fint-box p {
+        font-family: 'TT Norms Pro Light';
+        color: #000;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .find_section {
+        padding: 20px 0px;
+    }
+
+    .number {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+
+    .delicate-banner .input-flex input[type="text"] {
+        width: 50px;
+        height: 50px;
+    }
+
+    .otp-center {
+        width: 100%;
+        background-color: #fff;
+        padding: 47px 14px;
+    }
+
+    .img-box img {
+        width: 100%;
+    }
+
+    .fint-box {
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #d5d5d5;
+        padding: 25px 17px;
+        display: inline-flex;
+        justify-content: center;
+        column-count: unset;
+        width: 100%;
+    }
+
+    .number input {
+        height: 40px;
+        width: 70px;
+        text-align: center;
+        font-size: 26px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: 'TT Norms Pro Medium';
+    }
+
+    .form_box {
+        border-radius: 50px;
+        background-color: #fff;
+        padding: 40px 40px;
+        box-shadow: 0px 1px 10px #888888;
+    }
+
+    .form-cont {
+        margin-top: 40px;
+    }
+
+    .login-box {
+        width: 50%;
+    }
+
+    .img-box {
+        margin-top: 0px;
+        width: 50%;
+    }
+
+    .login-section {
+        display: inline-flex;
+    }
+
+    .img-box img {
+        width: 100%;
+    }
+
+    .footer-section {
+        display: block;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        padding: 100px 100px;
+    }
+
+    .women-box img {
+        margin-top: -675px;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .step-section li {
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    .step-section li:last-child {
+        display: inline-block;
+        margin-right: 0px;
+
+    }
+
+    form.details-form {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .step-section .active img {
+        width: 70%;
+        background: #FF8686;
+        padding: 15px 15px;
+        border-radius: 50px;
+    }
+
+    .step-section ul {
+        padding: 0px;
+    }
+
+    .step-section img {
+        width: 70%;
+
+    }
+
+    .step-section p {
+        font-family: 'TT Norms Pro Bold';
+        font-size: 10px;
+
+    }
+
+    .box-item {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        display: inline-flex;
+        justify-content: left;
+        margin: auto;
+        width: 100%;
+    }
+
+    .box-icon img {
+        width: 100%;
+        max-width: 100px;
+        border-radius: 50%;
+        padding: 25px 25px;
+        filter: drop-shadow(5px 5px 7.5px rgba(0, 0, 0, 0.16));
+        background: #ffffff;
+        margin-right: 30px;
+    }
+
+    h2.box-heading {
+        padding-top: 18px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        color: #1a2942;
+    }
+
+    .fint-box img {
+        width: 80px;
+        margin: unset;
+        text-align: center;
+        margin-bottom: 10px;
+        min-height: 85px;
+    }
+
+    .fint-box {
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #d5d5d5;
+        padding: 25px 17px;
+        display: inline-flex;
+        justify-content: space-between;
+        column-count: unset;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    a.book-btn.d-n {
+        display: none;
+    }
+
+    a.book-btn.d-b {
+        display: block;
+    }
+
+    .mention {
+        display: block;
+    }
+
+    .box-img img {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
+
+    a.login-btn.hidden-btn {
+        display: none;
+    }
+
+    a.login-btn.mobile-btn {
+        display: block;
+    }
+
+    .hidden-box {
+        display: block;
+    }
+
+    .hidden-box-one {
+        display: none;
+    }
+
+    .slider_data .inner {
+        max-width: 640px;
+        margin: 10px auto 40px;
+        padding: 30px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        top: 0px;
+    }
+
+    .Schedule-txt {
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    .pick-section {
+        padding: 15px 0px;
+    }
+
+    .pickup-section {
+        padding: 15px 0px;
+    }
+
+    .consult-section {
+        padding: 15px 0px;
+    }
+
+    .pick-section img {
+        position: absolute;
+        width: 100%;
+        top: -13px;
+        right: 0;
+    }
+
+    .yellow-section {
+        background-image: linear-gradient(#ffffff, #ffdadd, #E17296);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 80px !important;
+        padding-bottom: 100px;
+    }
+
+    .years-txt h2 {
+        font-size: 68px;
+        color: #29407C;
+        margin-bottom: 10px;
+        font-weight: 900;
+    }
+
+    .years-txt p {
+        width: 100%;
+    }
+
+    .fimily-box ul {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    span.fet {
+        position: absolute;
+        right: 73px;
+        top: 92px;
+    }
+
+    span.fet.tt {
+        right: 40px;
+    }
+
+    .main-form input,
+    .main-form select {
+        border: 1px solid #eee;
+        width: 80%;
+        margin: auto;
+        text-align: left;
+
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .multiple-items ul.slick-dots {
+        width: 100%;
+    }
+
+    .fimily-box li input:checked~.checkmark {
+        background: #ff8686;
+        width: 16px;
+        padding: 1px;
+        display: inline-block;
+        top: 3px;
+        position: relative;
+        height: 16px;
+        border-radius: 5px;
+    }
+
+    .checkup-txt p {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 30px;
+        line-height: 34px;
+        color: #000;
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    .checkup-txt h2 {
+        font-family: 'TT Norms Pro Bold';
+        font-size: 30px;
+        color: #000;
+        margin-bottom: 10px;
+    }
+
+    .checkup-txt p {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 20px;
+        line-height: 25px;
+        color: #000;
+        margin-bottom: 40px;
+        margin-right: 0px;
+    }
+
+    .call-img-box:hover {
+        border-radius: 100 !important;
+    }
+
+    .testimonial ul.slick-dots {
+        justify-content: center !important;
+    }
+
+    .step-section li {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .years-txt h2 {
+        font-size: 68px;
+        color: #29407C;
+        margin-bottom: 10px;
+        font-weight: 900;
+    }
+
+    .people-section {
+        border-radius: 16px;
+        background-color: #fff;
+        padding: 20px 15px;
+        box-shadow: 1px 1px 23px -14px #000;
+        margin: 0 1px;
+    }
+
+    .setting-txt p {
+        font-size: 18px;
+        font-family: 'TT Norms Pro Regular';
+        margin-right: 0px;
+        color: #1A2942;
+        margin-bottom: 0px;
+        line-height: 20px;
+        padding-bottom: 7px;
+    }
+
+    .slider_data .inner h2 {
+        text-align: left !important;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 10px;
+        max-width: 428px;
+    }
+
+    .slider_data .inner p {
+        text-align: left !important;
+        font-family: TTNorms-Regular;
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 40px;
+        max-width: 48%;
+    }
+
+    .tick img {
+        width: 84% !important;
+    }
+
+    .slider_data .inner li {
+        display: flex;
+        font-size: 20px;
+        font-family: 'TTNorms-Bold';
+        color: #000;
+        margin-bottom: 10px;
+    }
+
+    .slider_data .inner {
+        max-width: 398px !important;
+        margin: 10px auto 30px;
+        padding: 20px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .step-section li:after {
+        content: '';
+        width: 65%;
+        height: 5px;
+        background: white;
+        position: absolute;
+        left: 80%;
+        top: 24px;
+        z-index: -1;
+    }
+
+    .step-section p {
+        width: 83px;
+        margin-top: 10px;
+        line-height: 14px;
+    }
+
+    h1.title-heading {
+        font-size: 30px;
+    }
+
+    .title-sub-heading {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+        font-style: normal;
+        color: #1a2942;
+    }
+
+    .call-img-box {
+        width: unset;
+    }
+
+    .call-img-box {
+        margin: 0 96px;
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+    }
+
+    .slider_data .inner {
+        max-width: 640px;
+        margin: 20px auto 40px;
+        padding: 30px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        top: 62px;
+    }
+
+    .pick-section img {
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        right: 0;
+    }
+
+    .phone-section h2.heading-txt {
+        font-size: 20px;
+    }
+
+    .phone-section p {
+        font-size: 16px;
+    }
+
+    .our_package p {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .yellow-section {
+        padding-top: 0px !important;
+        padding-bottom: 150px;
+    }
+
+    .packages-rate {
+        margin-top: 40px;
+        margin-bottom: 100px;
+        border-bottom: 2px solid #eee;
+        background-image: linear-gradient(#ffffff, #ffdade, #E17296, #E17296);
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+
+    .recommed-banner {
+        padding-top: 119px;
+        margin: 0 10px;
+        border-radius: 25px;
+        margin-bottom: 56px;
+    }
+
+    .years-txt h2 {
+        font-size: 60px;
+        color: #29407C;
+        margin-bottom: -10px;
+        font-weight: 900;
+    }
+
+    .yellow-circle img {
+        width: 80px;
+        position: absolute;
+        top: -45px;
+        left: 1px;
+    }
+
+    .yellow-section {
+        padding-top: 0px !important;
+        padding-bottom: 100px;
+    }
+
+    .container.years-txt {
+        margin-bottom: 30px;
+    }
+
+    .col-sx-6 {
+        width: 50%;
+    }
+
+    .years-txt h2 {
+        font-size: 22px;
+        color: #29407C;
+        margin-bottom: 0px;
+        font-weight: 900;
+    }
+
+    .setting-txt p {
+        font-size: 18px;
+        font-family: 'TT Norms Pro Regular';
+        margin-right: 0px;
+        color: #1A2942;
+        margin-bottom: 0px;
+        line-height: 20px;
+    }
+
+    .slider-package-item .slick-list.draggable {
+        width: 100%;
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .fint-box {
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #d5d5d5;
+        padding: 25px 17px;
+        display: inline-flex;
+        justify-content: space-between;
+        column-count: unset;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    span.fet {
+        position: absolute;
+        right: 73px;
+        top: 92px;
+    }
+
+    .packages-box-coursel h3 {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 20px;
+        font-style: normal;
+        margin-bottom: 20px;
+        color: #1a2942;
+        min-height: 100px;
+    }
+
+    .packages-box-coursel .package-img {
+        width: 116px;
+        margin-bottom: -17px;
+        margin-top: -211px;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .call-img-box {
+        margin: 0 75px;
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+    }
+
+    .show_parameter {
+        display: none;
+        list-style: none;
+        width: 100%;
+        text-align: left;
+        background: #ffff;
+        margin: auto;
+        position: relative;
+        left: 0px;
+        top: -83px;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+        border-radius: 7px;
+        padding: 22px;
+    }
+
+    .text-urine {
+        font-family: 'TT Norms Pro Bold';
+        font-size: 25px;
+        color: #000;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    .text-date span {
+        background: #fff;
+        padding: 8px 8px;
+        margin: 0px 5px;
+        border-radius: 5px;
+        color: #FF8686;
+    }
+
+    .text-date {
+        font-family: 'TT Norms Pro Bold';
+        font-size: 24px;
+        color: #000;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+        left: initial;
+        text-align: left;
+    }
+
+    .packages-rate {
+        margin-top: 40px;
+        margin-bottom: 100px;
+        border-bottom: 2px solid #eee;
+        background-image: linear-gradient(#ffffff, #ffdade, #E17296, #E17296);
+        border-radius: 20px;
+        margin: 0 10px;
+        margin-top: 127px;
+    }
+
+    .packages-rate li {
+        font-size: 30px;
+        font-family: 'TT Norms Pro Bold' !important;
+        list-style: none;
+    }
+
+    .date-input.mt-3.mb-4 {
+        margin-top: -31px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .call-img-box {
+        margin: 0 50px;
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+    }
+
+    .step-section li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .recommed-banner {
+        padding-top: 20px;
+    }
+
+    .recommed-banner {
+        padding-bottom: 20px;
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+
+    .pick-section img {
+        position: absolute;
+        width: 100%;
+        top: 63px;
+        right: 0;
+    }
+
+    .phone-section h2.heading-txt {
+        font-size: 20px;
+
+    }
+
+    .phone-section p {
+        font-size: 16px;
+
+    }
+
+    .fimily-box li {
+        display: block;
+        margin-right: 0px;
+    }
+
+    .fimily-box {
+        font-size: 16px;
+    }
+
+    .click-txt a {
+        margin-right: 0px;
+        font-size: 14px;
+    }
+
+    .click-txt h2 {
+        font-size: 18px;
+        text-align: right;
+        color: #000;
+        font-family: 'TT Norms Pro Bold';
+    }
+
+    h2.heading-text {
+        font-family: 'TT Norms Pro Bold';
+        font-size: 35px;
+        color: #000;
+    }
+
+    .find-txt-p,
+    .health-txt-p {
+        font-family: 'TT Norms Pro Regular' !important;
+        font-size: 18px !important;
+        line-height: 20px;
+        margin-bottom: 45px;
+        color: #000;
+    }
+
+    .main-form input,
+    .main-form select {
+        border: 1px solid #eee;
+        width: 70%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .time-txt p {
+        font-family: 'TT Norms Pro Regular';
+        justify-content: center;
+        text-align: left;
+        font-size: 21px;
+        color: #1A2942;
+        text-transform: uppercase;
+        padding: 0px;
+        margin: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .otp-center {
+        width: 100%;
+        background-color: #fff;
+        padding: 30px 10px;
+    }
+
+    .delicate-banner .input-flex input[type="text"] {
+        width: 40px;
+        height: 40px;
+        margin: 0px 4px;
+    }
+
+    .form_box input[type="number"] {
+        width: 100%;
+        padding: 20px 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 13px;
+    }
+
+    button.otp-btn {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+
+    .footer-section {
+        display: block;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        padding: 100px 35px;
+    }
+
+    .step-section p {
+        width: 100%;
+        margin-top: 10px;
+        line-height: 14px;
+    }
+
+    .step-section .active img {
+        width: 100%;
+        background: #FF8686;
+        padding: 15px 15px;
+        border-radius: 50px;
+    }
+
+    .step-section img {
+        width: 100%;
+    }
+
+    a.details-btn {
+        background: #5D51A3;
+        color: #fff;
+        font-family: 'TT Norms Pro Medium';
+        font-size: 20px;
+        padding: 18px 40px;
+        border-radius: 50px;
+        margin-top: 77px;
+        font-weight: 400;
+        position: relative;
+        top: 100px;
+    }
+
+    .details-form label {
+        font-family: 'TT Norms Pro Regular';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #000;
+    }
+
+    .recommed-banner {
+        padding-bottom: 20px;
+    }
+
+    .women-box img {
+        margin-top: -399px;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .women-box {
+        background-color: #29407C;
+        padding: 60px 0px;
+        margin-top: 360px;
+    }
+
+    .phone-section h2.heading-txt {
+        font-size: 18px;
+
+    }
+
+    .call-img-box img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .call-img-box {
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+        width: unset;
+    }
+
+    h1.heading-txt.book-txt {
+        color: #fff !important;
+        font-size: 25px;
+    }
+
+    .health-txt {
+        font-size: 30px !important;
+        line-height: 32px;
+        margin-bottom: 31px;
+    }
+
+    a.book-btn {
+        padding: 15px 25px;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .number {
+        display: flex;
+    }
+
+    .fint-box img {
+        width: 60px;
+        margin: unset;
+        text-align: center;
+        margin-bottom: 10px;
+        min-height: 50px;
+    }
+
+    .fint-box p {
+        font-family: 'TT Norms Pro Light';
+        color: #000;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .phone-section {
+        padding: 30px 0px;
+    }
+
+    .date-input {
+        text-align: center;
+        position: relative;
+        left: -0px;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+    }
+
+    .date-input span {
+        color: #1A2942;
+        font-size: 16px;
+        position: relative;
+        top: 58px;
+        left: -48px;
+    }
+
+    .date-input img {
+        position: relative;
+        top: 75px;
+        right: 163px;
+        width: 65px;
+        padding: 12px;
+        border-radius: 7px;
+    }
+
+    .main-form input,
+    .main-form select {
+        border: 1px solid #eee;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 425px) {
+
+    .call-img-box {
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+        width: unset;
+        margin: 0 28px;
+    }
+
+    .fimily-box {
+        font-size: 14px;
+    }
+
+    .fimily-box {
+        border-radius: 20px;
+        border: 1px solid #d5d5d5;
+        padding: 10px 9px;
+        margin-bottom: 0px;
+    }
+
+    .mention-txt input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #DDDDDD;
+        font-size: 14px;
+        font-family: 'TT Norms Pro Light';
+        font-style: italic;
+        width: 100%;
+    }
+
+    .fimily-box ul {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    .women-box {
+        background-color: #29407C;
+        padding: 60px 0px;
+        margin-top: 300px;
+    }
+
+    .women-box img {
+        margin-top: -300px;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .navbar {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    .call-img-box {
+        background-color: #EC6E7A;
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        width: unset;
+        width: unset;
+        margin: 0 17px;
+    }
+
+    h2.title-heading {
+        font-size: 30px;
+    }
+
+    .box h3 {
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .image-section .poster-img {
+        width: 160px;
+        margin-bottom: -44px !important;
+        position: relative;
+        top: -23px;
+        margin-top: 0px !important;
+    }
+
+    .box {
+        background-color: #fff;
+        color: #111;
+        border-radius: 20px;
+        padding: 41px 30px 20px 30px;
+        width: 400px;
+    }
+
+    .process-section {
+        margin-top: 30px;
+    }
+
+    .main-banner {
+
+        padding-top: 50px !important;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .box {
+        background-color: #fff;
+        color: #111;
+        border-radius: 20px;
+        padding: 41px 15px 20px 15px;
+        width: 300px;
+    }
+
+    h2.title-heading {
+        font-size: 25px;
+    }
+
+    .box h3 {
+        font-size: 18px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .icon-text h2 {
+        font-family: TTNorms-Bold;
+        font-size: 20px;
+        color: #152944;
+        margin-left: 6px;
+    }
+
+    .image-section .poster-img {
+        width: 120px;
+        margin-bottom: -44px !important;
+        position: relative;
+        top: -16px;
+        margin-top: 0px !important;
+    }
+
+    .btn-blue {
+        border-radius: 56px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        color: #ffffff;
+        background: #29407c;
+        padding: 11px 30px;
+        margin-left: 0px;
+    }
+
+    .date-input span {
+        color: #1A2942;
+        font-size: 16px;
+        position: relative;
+        top: 58px;
+        left: -29px;
+    }
+
+    .date-input img {
+        position: relative;
+        top: 75px;
+        right: 146px;
+        width: 65px;
+        padding: 12px;
+        border-radius: 7px;
+    }
+}
